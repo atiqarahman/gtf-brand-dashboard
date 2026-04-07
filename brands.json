@@ -1,51 +1,6 @@
 {
   "brands": [
     {
-      "id": "corpora_studio",
-      "name": "Corpora Studio",
-      "stage": "Negotiating",
-      "commission": "40%",
-      "poc": "Aanchal",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
-      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.  Sending commercials now to them. Their Google driver folder. ",
-      "status_tag": "Waiting on Commission Agreement",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": false
-      },
-      "last_updated": "2026-04-07",
-      "recent_emails": [
-        {
-          "date": "19d68071f05d887b",
-          "from": "2026-04-07 16:59",
-          "subject": "atiqagtfpartnerships@getthefit.ai"
-        },
-        {
-          "date": "19d2eae2444aece5",
-          "from": "2026-03-27 13:44",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        },
-        {
-          "date": "19cbd663544eaa2c",
-          "from": "2026-03-22 09:23",
-          "subject": "Corpora Studio <studiocorpora@gmail.com>"
-        }
-      ],
-      "tracker_data": {
-        "instagram_status": "",
-        "email_status": "",
-        "last_contact": "",
-        "next_followup": "",
-        "notes": "Waiting for CSV files - March 11"
-      }
-    },
-    {
       "id": "try_on_dress",
       "name": "Try On Dress",
       "stage": "Onboarded",
@@ -53,7 +8,7 @@
       "poc": "",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1BX3nhh8oWN2gLhTYQB5EYWENkatK9Wh7",
-      "notes": "CSV and UGC received. Need Shop the Look \u2014 they have lots of matching separates. Highlight this to them.",
+      "notes": "CSV and UGC received. Need Shop the Look \u2014 they have lots of matching separates. Highlight this to them. Sending shop the look now. ",
       "status_tag": "Waiting on Shop the Look",
       "checklist": {
         "csv_received": true,
@@ -262,6 +217,51 @@
         "last_contact": "",
         "next_followup": "",
         "notes": "Send contract"
+      }
+    },
+    {
+      "id": "corpora_studio",
+      "name": "Corpora Studio",
+      "stage": "Negotiating",
+      "commission": "40%",
+      "poc": "Aanchal",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
+      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.  Sending commercials now to them. Their Google driver folder. ",
+      "status_tag": "Waiting on Commission Agreement",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": false
+      },
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d68071f05d887b",
+          "from": "2026-04-07 16:59",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cbd663544eaa2c",
+          "from": "2026-03-22 09:23",
+          "subject": "Corpora Studio <studiocorpora@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "Waiting for CSV files - March 11"
       }
     },
     {
