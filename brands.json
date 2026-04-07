@@ -634,7 +634,7 @@
       "brand": "Corpora Studio",
       "done": true,
       "completed_at": "2026-04-07 20:55:03.753428",
-      "notify_pending": true
+      "notify_pending": false
     },
     {
       "task": "WhatsApp Baroodi founder (POC group chat)",
