@@ -220,6 +220,51 @@
       }
     },
     {
+      "id": "shahin_mannan",
+      "name": "Shahin Mannan",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "Mansi",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1kHlqYyDzW97SzOKE5TPp1nVHcjb1-S73",
+      "notes": "Needs discussion on proposal \u2014 Mansi and Atiqa to finalize. Showed everything in person. Need templates + instructions.",
+      "status_tag": "Waiting on Commission Finalization",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19ce0757e0bc1e47",
+          "from": "2026-03-12 09:12",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19cdb458568587b8",
+          "from": "2026-03-11 09:01",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
+    },
+    {
       "id": "corpora_studio",
       "name": "Corpora Studio",
       "stage": "Negotiating",
@@ -330,51 +375,6 @@
         "last_contact": "",
         "next_followup": "",
         "notes": "Need to send contract - ATIQA"
-      }
-    },
-    {
-      "id": "shahin_mannan",
-      "name": "Shahin Mannan",
-      "stage": "In Talks",
-      "commission": "40%",
-      "poc": "Mansi",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1kHlqYyDzW97SzOKE5TPp1nVHcjb1-S73",
-      "notes": "Needs discussion on proposal \u2014 Mansi and Atiqa to finalize. Showed everything in person. Need templates + instructions.",
-      "status_tag": "Waiting on Commission Finalization",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": true
-      },
-      "last_updated": "2026-04-07",
-      "recent_emails": [
-        {
-          "date": "19d2eae2444aece5",
-          "from": "2026-03-27 13:44",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        },
-        {
-          "date": "19ce0757e0bc1e47",
-          "from": "2026-03-12 09:12",
-          "subject": "atiqagtfpartnerships@getthefit.ai"
-        },
-        {
-          "date": "19cdb458568587b8",
-          "from": "2026-03-11 09:01",
-          "subject": "atiqagtfpartnerships@getthefit.ai"
-        }
-      ],
-      "tracker_data": {
-        "instagram_status": "",
-        "email_status": "",
-        "last_contact": "",
-        "next_followup": "",
-        "notes": ""
       }
     },
     {
