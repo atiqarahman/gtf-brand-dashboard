@@ -315,5 +315,119 @@
       },
       "last_updated": "2026-04-07"
     }
+  ],
+  "action_items": [
+    {
+      "task": "Send Corpora Studio the Google Drive folder",
+      "assigned": "Atiqa",
+      "due": "2026-04-07",
+      "brand": "Corpora Studio",
+      "done": false
+    },
+    {
+      "task": "WhatsApp Baroodi founder (POC group chat)",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "BAROODI",
+      "done": false
+    },
+    {
+      "task": "WhatsApp Yavi brand \u2014 no response",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "YAVI",
+      "done": false
+    },
+    {
+      "task": "WhatsApp Mishru",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "Mishru",
+      "done": false
+    },
+    {
+      "task": "Follow up Bloni if no Calendly booking",
+      "assigned": "Zoya",
+      "due": "2026-04-10",
+      "brand": "Bloni",
+      "done": false
+    },
+    {
+      "task": "Follow up Chorus World email",
+      "assigned": "Zoya",
+      "due": "2026-04-11",
+      "brand": "Chorus World",
+      "done": false
+    },
+    {
+      "task": "DM Chorus World on Instagram",
+      "assigned": "Muskaan",
+      "due": "2026-04-11",
+      "brand": "Chorus World",
+      "done": false
+    },
+    {
+      "task": "Follow up Ashi Studio (Rasha) \u2014 finalize commercials + Calendly",
+      "assigned": "Zoya",
+      "due": "2026-04-11",
+      "brand": "Ashi Studio",
+      "done": false
+    },
+    {
+      "task": "WhatsApp Bodhi Tree \u2014 follow up on status",
+      "assigned": "Muskaan",
+      "due": "2026-04-07",
+      "brand": "Bodhi Tree",
+      "done": false
+    },
+    {
+      "task": "WhatsApp Echo \u2014 follow up",
+      "assigned": "Muskaan",
+      "due": "2026-04-07",
+      "brand": "Echo",
+      "done": false
+    },
+    {
+      "task": "Send Deepa Gurnani WhatsApp contact to Atiqa",
+      "assigned": "Muskaan",
+      "due": "2026-04-07",
+      "brand": "Deepa Gurnani",
+      "done": false
+    },
+    {
+      "task": "DM Monstand on Instagram \u2014 get their email",
+      "assigned": "Muskaan",
+      "due": "2026-04-08",
+      "brand": "Monstand",
+      "done": false
+    },
+    {
+      "task": "Send fresh follow-up to Label Citara (Anjali) \u2014 17 days cold",
+      "assigned": "Zoya",
+      "due": "2026-04-08",
+      "brand": "Label Citara",
+      "done": false
+    },
+    {
+      "task": "Send Payal Singhal onboarding folder link",
+      "assigned": "Atiqa",
+      "due": "2026-04-08",
+      "brand": "Payal Singhal",
+      "done": false
+    },
+    {
+      "task": "Send Aggunj templates folder link",
+      "assigned": "Atiqa",
+      "due": "2026-04-08",
+      "brand": "Aggunj",
+      "done": false
+    },
+    {
+      "task": "Follow up Rimple and Harpreet directly",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "Rimple & Harpreet",
+      "done": false
+    }
   ]
 }

@@ -166,7 +166,7 @@ with st.sidebar:
 # ── Main Content ──
 
 # Tab navigation
-tab_brands, tab_calendar = st.tabs(["📋 Brands", "📅 Meetings"])
+tab_brands, tab_actions, tab_calendar = st.tabs(["📋 Brands", "⚡ Action Items", "📅 Meetings"])
 
 # ═══════ BRANDS TAB ═══════
 with tab_brands:
@@ -297,6 +297,109 @@ with tab_brands:
                 save_brands(data, sha, f"Update: {brand['name']} → {new_stage}")
                 st.success(f"✅ {brand['name']} updated!")
                 st.rerun()
+
+# ═══════ ACTION ITEMS TAB ═══════
+with tab_actions:
+    st.markdown("# ⚡ Action Items")
+    st.markdown("*Tasks assigned to team members with due dates*")
+    st.markdown("---")
+    
+    action_items = data.get("action_items", [])
+    
+    if action_items:
+        # Filter by person
+        people = sorted(set(a["assigned"] for a in action_items))
+        filter_person = st.radio("Filter by", ["All"] + people, horizontal=True, key="action_filter")
+        
+        if filter_person != "All":
+            filtered_actions = [a for a in action_items if a["assigned"] == filter_person]
+        else:
+            filtered_actions = action_items
+        
+        # Sort: undone first, then by due date
+        filtered_actions.sort(key=lambda a: (a.get("done", False), a.get("due", "9999")))
+        
+        # Stats
+        total_actions = len(action_items)
+        done_actions = sum(1 for a in action_items if a.get("done"))
+        col_s1, col_s2, col_s3 = st.columns(3)
+        col_s1.metric("Total Tasks", total_actions)
+        col_s2.metric("Done", done_actions)
+        col_s3.metric("Pending", total_actions - done_actions)
+        
+        st.markdown("---")
+        
+        for ai_idx, item in enumerate(filtered_actions):
+            is_done = item.get("done", False)
+            is_overdue = not is_done and item.get("due", "9999") < str(date.today())
+            
+            # Color coding
+            if is_done:
+                icon = "✅"
+                style = "opacity: 0.5;"
+            elif is_overdue:
+                icon = "🔴"
+                style = "color: #dc2626; font-weight: 600;"
+            elif item.get("due", "") == str(date.today()):
+                icon = "🟡"
+                style = "color: #ea580c; font-weight: 500;"
+            else:
+                icon = "⭕"
+                style = ""
+            
+            # Person badge color
+            person_colors = {"Atiqa": "#7c3aed", "Muskaan": "#0891b2", "Zoya": "#059669"}
+            person_color = person_colors.get(item["assigned"], "#6b7280")
+            
+            col_check, col_info = st.columns([0.5, 5])
+            
+            with col_check:
+                # Find original index in action_items for saving
+                orig_idx = action_items.index(item) if item in action_items else None
+                new_done = st.checkbox("", value=is_done, key=f"action_done_{ai_idx}_{item.get('brand','')}")
+                if new_done != is_done and orig_idx is not None:
+                    action_items[orig_idx]["done"] = new_done
+                    data["action_items"] = action_items
+                    save_brands(data, sha, f"Action: {'done' if new_done else 'undone'} - {item['task'][:40]}")
+                    st.rerun()
+            
+            with col_info:
+                st.markdown(f"""
+                <div style="{style} padding: 4px 0;">
+                    {icon} <span style="background: {person_color}; color: white; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600;">{item['assigned']}</span>
+                    &nbsp; <strong>{item['task']}</strong>
+                    <br><span style="font-size: 12px; color: #888;">🎯 {item.get('brand', '')} &nbsp;·&nbsp; 📅 Due: {item.get('due', 'No date')}{' · 🔴 OVERDUE' if is_overdue else ''}</span>
+                </div>
+                """, unsafe_allow_html=True)
+        
+        st.markdown("---")
+        
+        # Add new action item
+        with st.expander("➕ Add New Action Item"):
+            new_task = st.text_input("Task description", key="new_action_task")
+            col_a1, col_a2, col_a3 = st.columns(3)
+            with col_a1:
+                new_assigned = st.selectbox("Assigned to", ["Atiqa", "Muskaan", "Zoya"], key="new_action_person")
+            with col_a2:
+                new_due = st.date_input("Due date", value=date.today(), key="new_action_due")
+            with col_a3:
+                new_brand = st.text_input("Brand", key="new_action_brand")
+            
+            if st.button("Add Task", type="primary", key="add_action_btn"):
+                if new_task:
+                    action_items.append({
+                        "task": new_task,
+                        "assigned": new_assigned,
+                        "due": str(new_due),
+                        "brand": new_brand,
+                        "done": False
+                    })
+                    data["action_items"] = action_items
+                    save_brands(data, sha, f"New action: {new_task[:40]}")
+                    st.success(f"✅ Task added for {new_assigned}!")
+                    st.rerun()
+    else:
+        st.info("No action items yet. Add one using the form below.")
 
 # ═══════ CALENDAR TAB ═══════
 with tab_calendar:
