@@ -227,7 +227,7 @@
       "poc": "Mansi",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1kHlqYyDzW97SzOKE5TPp1nVHcjb1-S73",
-      "notes": "Needs discussion on proposal \u2014 Mansi and Atiqa to finalize. Showed everything in person. Need templates + instructions.",
+      "notes": "Sending proposal now. ",
       "status_tag": "Waiting on Commission Finalization",
       "checklist": {
         "csv_received": false,
@@ -307,6 +307,51 @@
         "last_contact": "",
         "next_followup": "",
         "notes": "MUSKAAN NEEDS TO DM - email bounced (communication@graineworld.com), no alternative found. IG: @mannatt.graine (founder Mannat Sethi)"
+      }
+    },
+    {
+      "id": "realm_by_vaishali",
+      "name": "Realm by Vaishali",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1fguyBSKO1EEhlfgO8RVwBNj6_jxx7IMO",
+      "notes": "Need all templates. Commission proposal. Marketplace essence.",
+      "status_tag": "Waiting on All Templates",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cd79d1f481711d",
+          "from": "2026-03-17 18:38",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cd79d1f481711d",
+          "from": "2026-03-12 15:08",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "In negotiations - March 11"
       }
     },
     {
@@ -555,51 +600,6 @@
         "last_contact": "",
         "next_followup": "",
         "notes": "Meeting founder this week - March 2026"
-      }
-    },
-    {
-      "id": "realm_by_vaishali",
-      "name": "Realm by Vaishali",
-      "stage": "In Talks",
-      "commission": "40%",
-      "poc": "",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1fguyBSKO1EEhlfgO8RVwBNj6_jxx7IMO",
-      "notes": "Need all templates. Commission proposal. Marketplace essence.",
-      "status_tag": "Waiting on All Templates",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": true
-      },
-      "last_updated": "2026-04-07",
-      "recent_emails": [
-        {
-          "date": "19d2eae2444aece5",
-          "from": "2026-03-27 13:44",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        },
-        {
-          "date": "19cd79d1f481711d",
-          "from": "2026-03-17 18:38",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        },
-        {
-          "date": "19cd79d1f481711d",
-          "from": "2026-03-12 15:08",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        }
-      ],
-      "tracker_data": {
-        "instagram_status": "",
-        "email_status": "",
-        "last_contact": "",
-        "next_followup": "",
-        "notes": "In negotiations - March 11"
       }
     },
     {
