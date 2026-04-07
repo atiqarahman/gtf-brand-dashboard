@@ -383,7 +383,22 @@ with tab_scout:
             scout_queue = data.get("scout_queue", [])
             for f in uploaded_files:
                 import base64
-                file_bytes = f.read()
+                from io import BytesIO
+                try:
+                    from PIL import Image
+                    # Compress image to ~100KB JPEG for brand identification
+                    img = Image.open(f)
+                    img.thumbnail((800, 800))  # Resize to max 800px
+                    buffer = BytesIO()
+                    img.save(buffer, format="JPEG", quality=60)
+                    compressed = buffer.getvalue()
+                    thumbnail_b64 = base64.b64encode(compressed).decode()
+                except Exception:
+                    # Fallback: just take first 200KB raw
+                    f.seek(0)
+                    file_bytes = f.read()
+                    thumbnail_b64 = base64.b64encode(file_bytes[:200000]).decode() if len(file_bytes) > 0 else None
+                
                 scout_queue.append({
                     "filename": f.name,
                     "tracker": tracker_choice,
@@ -394,8 +409,7 @@ with tab_scout:
                     "website": None,
                     "instagram": None,
                     "poc_email": None,
-                    # Store small base64 thumbnail for reference
-                    "thumbnail": base64.b64encode(file_bytes[:50000]).decode() if len(file_bytes) < 50000 else None
+                    "thumbnail": thumbnail_b64
                 })
                 f.seek(0)  # Reset file pointer
             

@@ -316,18 +316,5 @@
       "last_updated": "2026-04-07"
     }
   ],
-  "scout_queue": [
-    {
-      "filename": "Screenshot 2026-04-07 at 5.33.23\u202fPM.png",
-      "tracker": "Indian Brands",
-      "uploaded_at": "2026-04-07 12:03:39.653078",
-      "uploaded_by": "Muskaan",
-      "status": "pending",
-      "identified_brand": null,
-      "website": null,
-      "instagram": null,
-      "poc_email": null,
-      "thumbnail": null
-    }
-  ]
+  "scout_queue": []
 }
