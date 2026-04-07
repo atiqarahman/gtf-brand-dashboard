@@ -349,7 +349,7 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
       "last_updated": "2026-04-07",
       "recent_emails": [
