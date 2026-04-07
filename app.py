@@ -166,7 +166,7 @@ with st.sidebar:
 # ── Main Content ──
 
 # Tab navigation
-tab_brands, tab_calendar, tab_scout = st.tabs(["📋 Brands", "📅 Meetings", "🔍 Brand Scout"])
+tab_brands, tab_calendar = st.tabs(["📋 Brands", "📅 Meetings"])
 
 # ═══════ BRANDS TAB ═══════
 with tab_brands:
@@ -348,103 +348,6 @@ with tab_calendar:
     
     st.markdown("---")
     st.markdown("*Meetings are pulled from atiqa@getthefit.ai calendar. Any event with brand names or keywords like 'partnership', 'onboard', 'x Get the Fit' will show here.*")
-
-# ═══════ BRAND SCOUT TAB ═══════
-with tab_scout:
-    st.markdown("# 🔍 Brand Scout")
-    st.markdown("*Upload Instagram screenshots of brands. Zoya will identify them and add to the tracker.*")
-    st.markdown("---")
-    
-    # Tracker selection
-    tracker_choice = st.radio("Which tracker?", ["Indian Brands", "International Brands"], horizontal=True, key="tracker_radio")
-    
-    # File uploader
-    uploaded_files = st.file_uploader(
-        "Upload Instagram screenshots (up to 10)", 
-        type=["jpg", "jpeg", "png"],
-        accept_multiple_files=True,
-        key="scout_uploader"
-    )
-    
-    if uploaded_files:
-        st.markdown(f"**{len(uploaded_files)} screenshot(s) uploaded**")
-        
-        # Show thumbnails
-        cols = st.columns(min(len(uploaded_files), 5))
-        for i, f in enumerate(uploaded_files):
-            with cols[i % 5]:
-                st.image(f, caption=f.name, width=150)
-        
-        st.markdown("---")
-        
-        # Save screenshots to a pending folder in the data
-        if st.button("🚀 Send to Zoya for identification", type="primary", key="scout_send"):
-            # Save file info to a scout_queue in brands.json
-            scout_queue = data.get("scout_queue", [])
-            for f in uploaded_files:
-                import base64
-                from io import BytesIO
-                try:
-                    from PIL import Image
-                    # Compress image to ~100KB JPEG for brand identification
-                    img = Image.open(f)
-                    img.thumbnail((800, 800))  # Resize to max 800px
-                    buffer = BytesIO()
-                    img.save(buffer, format="JPEG", quality=60)
-                    compressed = buffer.getvalue()
-                    thumbnail_b64 = base64.b64encode(compressed).decode()
-                except Exception:
-                    # Fallback: just take first 200KB raw
-                    f.seek(0)
-                    file_bytes = f.read()
-                    thumbnail_b64 = base64.b64encode(file_bytes[:200000]).decode() if len(file_bytes) > 0 else None
-                
-                scout_queue.append({
-                    "filename": f.name,
-                    "tracker": tracker_choice,
-                    "uploaded_at": str(datetime.now()),
-                    "uploaded_by": "Muskaan",
-                    "status": "pending",
-                    "identified_brand": None,
-                    "website": None,
-                    "instagram": None,
-                    "poc_email": None,
-                    "thumbnail": thumbnail_b64
-                })
-                f.seek(0)  # Reset file pointer
-            
-            data["scout_queue"] = scout_queue
-            save_brands(data, sha, f"Scout: {len(uploaded_files)} screenshots uploaded")
-            st.success(f"✅ {len(uploaded_files)} screenshots sent to Zoya! She'll identify the brands and update the tracker. You'll see them appear in the Brands tab.")
-            st.balloons()
-    
-    # Show pending identifications
-    scout_queue = data.get("scout_queue", [])
-    pending = [s for s in scout_queue if s["status"] == "pending"]
-    identified = [s for s in scout_queue if s["status"] == "identified"]
-    
-    if pending:
-        st.markdown("---")
-        st.markdown(f"### ⏳ Pending Identification ({len(pending)})")
-        for s in pending:
-            st.markdown(f"- **{s['filename']}** — {s['tracker']} — uploaded {s['uploaded_at'][:16]}")
-    
-    if identified:
-        st.markdown("---")
-        st.markdown(f"### ✅ Recently Identified ({len(identified)})")
-        for s in identified:
-            st.markdown(f"- **{s.get('identified_brand', '?')}** — {s.get('website', '')} — [{s.get('instagram', '')}]")
-    
-    st.markdown("---")
-    st.markdown("""
-    **How it works:**
-    1. Upload Instagram screenshots of brands you've found
-    2. Select which tracker (Indian or International)
-    3. Click 'Send to Zoya'
-    4. Zoya identifies the brand name, website, and contact info
-    5. Brand gets added to the correct tracker sheet automatically
-    6. You then fill in POC details from your DMs
-    """)
 
 # ── Footer ──
 st.markdown("---")
