@@ -265,6 +265,51 @@
       }
     },
     {
+      "id": "leh_studio",
+      "name": "LEH Studio",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1ReYkQGJ1D1ngbcdN2hmu9774p9vQL-vR",
+      "notes": "Meeting done. Email bounced \u2014 Muskaan needs to DM. Need proposal, commission breakdown, marketplace deck, all templates.",
+      "status_tag": "Email Bounced \u2014 Need Instagram DM",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d3d2171397b512",
+          "from": "2026-03-30 09:04",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19d288b396d214ed",
+          "from": "2026-03-26 14:00",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "MUSKAAN NEEDS TO DM - email bounced (communication@graineworld.com), no alternative found. IG: @mannatt.graine (founder Mannat Sethi)"
+      }
+    },
+    {
       "id": "corpora_studio",
       "name": "Corpora Studio",
       "stage": "Negotiating",
@@ -529,7 +574,7 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
       "last_updated": "2026-04-07",
       "recent_emails": [
@@ -555,51 +600,6 @@
         "last_contact": "",
         "next_followup": "",
         "notes": "In negotiations - March 11"
-      }
-    },
-    {
-      "id": "leh_studio",
-      "name": "LEH Studio",
-      "stage": "In Talks",
-      "commission": "40%",
-      "poc": "",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1ReYkQGJ1D1ngbcdN2hmu9774p9vQL-vR",
-      "notes": "Meeting done. Email bounced \u2014 Muskaan needs to DM. Need proposal, commission breakdown, marketplace deck, all templates.",
-      "status_tag": "Email Bounced \u2014 Need Instagram DM",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": true
-      },
-      "last_updated": "2026-04-07",
-      "recent_emails": [
-        {
-          "date": "19d3d2171397b512",
-          "from": "2026-03-30 09:04",
-          "subject": "atiqagtfpartnerships@getthefit.ai"
-        },
-        {
-          "date": "19d2eae2444aece5",
-          "from": "2026-03-27 13:44",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        },
-        {
-          "date": "19d288b396d214ed",
-          "from": "2026-03-26 14:00",
-          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
-        }
-      ],
-      "tracker_data": {
-        "instagram_status": "",
-        "email_status": "",
-        "last_contact": "",
-        "next_followup": "",
-        "notes": "MUSKAAN NEEDS TO DM - email bounced (communication@graineworld.com), no alternative found. IG: @mannatt.graine (founder Mannat Sethi)"
       }
     },
     {
