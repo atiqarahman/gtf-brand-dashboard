@@ -1,22 +1,22 @@
 {
   "brands": [
     {
-      "id": "itrh",
-      "name": "ITRH",
-      "stage": "Onboarded",
+      "id": "corpora_studio",
+      "name": "Corpora Studio",
+      "stage": "Negotiating",
       "commission": "40%",
-      "poc": "",
+      "poc": "Aanchal",
       "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1nE6bhigwqf1rTrPxXVJ95Qcd1LBk-D5G",
-      "notes": "Need update on import/export license. UGC videos pending. Shop the Look template needed.",
-      "status_tag": "Waiting on UGC Videos",
+      "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
+      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.",
+      "status_tag": "OVERDUE \u2014 Commercials Requested",
       "checklist": {
-        "csv_received": true,
+        "csv_received": false,
         "ugc_videos": false,
         "shop_the_look": false,
         "import_export_license": false,
         "commission_agreed": false,
-        "brand_assets": true,
+        "brand_assets": false,
         "proposal_sent": false
       },
       "last_updated": "2026-04-07"
@@ -39,6 +39,27 @@
         "commission_agreed": true,
         "brand_assets": true,
         "proposal_sent": true
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "itrh",
+      "name": "ITRH",
+      "stage": "Onboarded",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1nE6bhigwqf1rTrPxXVJ95Qcd1LBk-D5G",
+      "notes": "Need update on import/export license. UGC videos pending. Shop the Look template needed.",
+      "status_tag": "Waiting on UGC Videos",
+      "checklist": {
+        "csv_received": true,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": true,
+        "proposal_sent": false
       },
       "last_updated": "2026-04-07"
     },
@@ -85,27 +106,6 @@
       "last_updated": "2026-04-07"
     },
     {
-      "id": "house_of_oro",
-      "name": "House of Oro",
-      "stage": "In Talks",
-      "commission": "40%",
-      "poc": "",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/17D5FjoLrW6QEWLat2iJ694TmFWfZF0Q_",
-      "notes": "Need everything \u2014 all templates. Gowns only so no Shop the Look needed. Need 40% proposal.",
-      "status_tag": "Waiting on All Templates",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": false
-      },
-      "last_updated": "2026-04-07"
-    },
-    {
       "id": "aggunj",
       "name": "Aggunj",
       "stage": "Onboarded",
@@ -123,6 +123,27 @@
         "commission_agreed": false,
         "brand_assets": true,
         "proposal_sent": true
+      },
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "house_of_oro",
+      "name": "House of Oro",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/17D5FjoLrW6QEWLat2iJ694TmFWfZF0Q_",
+      "notes": "Need everything \u2014 all templates. Gowns only so no Shop the Look needed. Need 40% proposal.",
+      "status_tag": "Waiting on All Templates",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": false
       },
       "last_updated": "2026-04-07"
     },
@@ -274,27 +295,6 @@
       "last_updated": "2026-04-07"
     },
     {
-      "id": "corpora_studio",
-      "name": "Corpora Studio",
-      "stage": "Negotiating",
-      "commission": "40%",
-      "poc": "Aanchal",
-      "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
-      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.",
-      "status_tag": "OVERDUE \u2014 Commercials Requested",
-      "checklist": {
-        "csv_received": false,
-        "ugc_videos": false,
-        "shop_the_look": false,
-        "import_export_license": false,
-        "commission_agreed": false,
-        "brand_assets": false,
-        "proposal_sent": false
-      },
-      "last_updated": "2026-04-07"
-    },
-    {
       "id": "label_by_jenn",
       "name": "Label by Jenn",
       "stage": "In Talks",
@@ -314,6 +314,20 @@
         "proposal_sent": false
       },
       "last_updated": "2026-04-07"
+    }
+  ],
+  "scout_queue": [
+    {
+      "filename": "Screenshot 2026-04-07 at 5.33.23\u202fPM.png",
+      "tracker": "Indian Brands",
+      "uploaded_at": "2026-04-07 12:03:39.653078",
+      "uploaded_by": "Muskaan",
+      "status": "pending",
+      "identified_brand": null,
+      "website": null,
+      "instagram": null,
+      "poc_email": null,
+      "thumbnail": null
     }
   ]
 }
