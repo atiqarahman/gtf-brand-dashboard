@@ -293,6 +293,27 @@
         "proposal_sent": false
       },
       "last_updated": "2026-04-07"
+    },
+    {
+      "id": "label_by_jenn",
+      "name": "Label by Jenn",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "Divya",
+      "poc_email": "9819331886",
+      "drive_folder": "",
+      "notes": "Meeting scheduled Apr 8 at 11 AM IST",
+      "status_tag": "New \u2014 Setup Needed",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": false
+      },
+      "last_updated": "2026-04-07"
     }
   ]
 }
