@@ -362,8 +362,8 @@
       "poc": "Aanchal",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
-      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.  Sending commercials now to them. Their Google driver folder. ",
-      "status_tag": "Waiting on Commission Agreement",
+      "notes": "Commercials + Drive folder sent Apr 7 by Zoya. Requested Delhi meeting next week. Follow up Apr 11.",
+      "status_tag": "Proposal Sent \u2014 Awaiting Response",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -371,7 +371,7 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
       "last_updated": "2026-04-07",
       "recent_emails": [
@@ -632,7 +632,9 @@
       "assigned": "Atiqa",
       "due": "2026-04-07",
       "brand": "Corpora Studio",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-07 20:55:03.753428",
+      "notify_pending": true
     },
     {
       "task": "WhatsApp Baroodi founder (POC group chat)",
