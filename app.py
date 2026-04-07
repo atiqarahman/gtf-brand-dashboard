@@ -287,7 +287,8 @@ for idx, brand in enumerate(filtered):
             
             changed = False
             for key, label in checklist_labels.items():
-                new_val = st.checkbox(label, value=checklist.get(key, False), key=f"{brand['id']}_{key}")
+                unique_key = f"{brand['id']}_{key}_{idx}"
+                new_val = st.checkbox(label, value=checklist.get(key, False), key=unique_key)
                 if new_val != checklist.get(key, False):
                     checklist[key] = new_val
                     changed = True
@@ -312,7 +313,7 @@ for idx, brand in enumerate(filtered):
         with col_edit1:
             new_stage = st.selectbox("Update Stage", ["In Talks", "Negotiating", "Onboarded", "Complete"], 
                                      index=["In Talks", "Negotiating", "Onboarded", "Complete"].index(brand["stage"]) if brand["stage"] in ["In Talks", "Negotiating", "Onboarded", "Complete"] else 0,
-                                     key=f"stage_{brand['id']}")
+                                     key=f"stage_{brand['id']}_{idx}")
         
         with col_edit2:
             status_options = [
@@ -338,14 +339,14 @@ for idx, brand in enumerate(filtered):
                 if opt == brand.get("status_tag", ""):
                     current_idx = i
                     break
-            new_status = st.selectbox("Status", status_options, index=current_idx, key=f"status_{brand['id']}")
+            new_status = st.selectbox("Status", status_options, index=current_idx, key=f"status_{brand['id']}_{idx}")
             if new_status == "Custom...":
-                new_status = st.text_input("Custom status", key=f"custom_status_{brand['id']}")
+                new_status = st.text_input("Custom status", key=f"custom_status_{brand['id']}_{idx}")
         
         with col_edit3:
-            new_notes = st.text_area("Notes", value=brand.get("notes", ""), height=80, key=f"notes_{brand['id']}")
+            new_notes = st.text_area("Notes", value=brand.get("notes", ""), height=80, key=f"notes_{brand['id']}_{idx}")
         
-        if st.button("💾 Save Changes", key=f"save_{brand['id']}"):
+        if st.button("💾 Save Changes", key=f"save_{brand['id']}_{idx}"):
             brand["stage"] = new_stage
             brand["status_tag"] = new_status
             brand["notes"] = new_notes
