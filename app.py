@@ -265,6 +265,34 @@ with tab_brands:
                     save_brands(data, sha, f"Update checklist: {brand['name']}")
                     st.rerun()
             
+            # Email threads + Tracker data
+            recent_emails = brand.get("recent_emails", [])
+            tracker_data = brand.get("tracker_data", {})
+            
+            if recent_emails or tracker_data:
+                st.markdown("---")
+            
+            if tracker_data:
+                td_cols = st.columns(4)
+                if tracker_data.get("instagram_status"):
+                    td_cols[0].markdown(f"**IG Status:** {tracker_data['instagram_status']}")
+                if tracker_data.get("email_status"):
+                    td_cols[1].markdown(f"**Email Status:** {tracker_data['email_status']}")
+                if tracker_data.get("last_contact"):
+                    td_cols[2].markdown(f"**Last Contact:** {tracker_data['last_contact']}")
+                if tracker_data.get("next_followup"):
+                    td_cols[3].markdown(f"**Next F/U:** {tracker_data['next_followup']}")
+                if tracker_data.get("notes"):
+                    st.markdown(f"**Tracker Notes:** {tracker_data['notes']}")
+            
+            if recent_emails:
+                st.markdown("**Recent Emails:**")
+                for em in recent_emails[:3]:
+                    em_from = em.get('from', '')[:40]
+                    em_date = em.get('date', '')[:10]
+                    em_subj = em.get('subject', '')[:60]
+                    st.markdown(f"- `{em_date}` · {em_from} · *{em_subj}*")
+            
             # Edit section
             st.markdown("---")
             col_e1, col_e2, col_e3 = st.columns(3)

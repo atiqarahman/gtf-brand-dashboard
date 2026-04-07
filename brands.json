@@ -19,7 +19,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d68071f05d887b",
+          "from": "2026-04-07 16:59",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cbd663544eaa2c",
+          "from": "2026-03-22 09:23",
+          "subject": "Corpora Studio <studiocorpora@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "Waiting for CSV files - March 11"
+      }
     },
     {
       "id": "try_on_dress",
@@ -40,7 +64,31 @@
         "brand_assets": true,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d5c08932b2a2a9",
+          "from": "2026-04-07 03:18",
+          "subject": "Jennifer Olson <jenny@shopdoen.com>"
+        },
+        {
+          "date": "19d5eb008eda09df",
+          "from": "2026-04-06 06:30",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d5c73828b7bb3d",
+          "from": "2026-04-05 11:02",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "itrh",
@@ -61,7 +109,31 @@
         "brand_assets": true,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d5c08932b2a2a9",
+          "from": "2026-04-07 03:18",
+          "subject": "Jennifer Olson <jenny@shopdoen.com>"
+        },
+        {
+          "date": "19d5eb008eda09df",
+          "from": "2026-04-06 06:30",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d5c73d27b64ec5",
+          "from": "2026-04-05 11:03",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "nikita_mhaisalkar",
@@ -82,7 +154,25 @@
         "brand_assets": true,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d5eb008eda09df",
+          "from": "2026-04-06 06:30",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d0ff4cc79fa762",
+          "from": "2026-03-21 14:39",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d054713d2cce41",
+          "from": "2026-03-19 12:47",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {}
     },
     {
       "id": "bobo_calcutta",
@@ -103,7 +193,31 @@
         "brand_assets": true,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d5c08932b2a2a9",
+          "from": "2026-04-07 03:18",
+          "subject": "Jennifer Olson <jenny@shopdoen.com>"
+        },
+        {
+          "date": "19d5eb008eda09df",
+          "from": "2026-04-06 06:30",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d5c73d27b64ec5",
+          "from": "2026-04-05 11:03",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "aggunj",
@@ -124,7 +238,31 @@
         "brand_assets": true,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d68071f05d887b",
+          "from": "2026-04-07 16:59",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d5eb008eda09df",
+          "from": "2026-04-06 06:30",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "Send contract"
+      }
     },
     {
       "id": "house_of_oro",
@@ -145,7 +283,9 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [],
+      "tracker_data": {}
     },
     {
       "id": "payal_singhal",
@@ -166,7 +306,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d68071f05d887b",
+          "from": "2026-04-07 16:59",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d3d2171397b512",
+          "from": "2026-03-30 09:04",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "Need to send contract - ATIQA"
+      }
     },
     {
       "id": "shahin_mannan",
@@ -187,7 +351,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19ce0757e0bc1e47",
+          "from": "2026-03-12 09:12",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19cdb458568587b8",
+          "from": "2026-03-11 09:01",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "surily_g",
@@ -208,7 +396,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d0ff4cc79fa762",
+          "from": "2026-03-21 14:39",
+          "subject": "Atiqa Rahman <atiqagtfpartnerships@getthefit.ai>"
+        },
+        {
+          "date": "19cae3f2c813cd3e",
+          "from": "2026-03-02 15:11",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19cae37b9376fc28",
+          "from": "2026-03-02 15:03",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "sanne",
@@ -229,7 +441,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19d054ad2007e912",
+          "from": "2026-03-19 12:51",
+          "subject": "Club L London Customer Care <care@clubllondon.com>"
+        },
+        {
+          "date": "19d054ad2007e912",
+          "from": "2026-03-19 12:51",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": ""
+      }
     },
     {
       "id": "baroodi",
@@ -250,7 +486,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d68071f05d887b",
+          "from": "2026-04-07 16:59",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d62f13b9ea9c75",
+          "from": "2026-04-06 17:19",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19d62f13b9ea9c75",
+          "from": "2026-04-06 17:17",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "Meeting founder this week - March 2026"
+      }
     },
     {
       "id": "realm_by_vaishali",
@@ -271,7 +531,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cd79d1f481711d",
+          "from": "2026-03-17 18:38",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19cd79d1f481711d",
+          "from": "2026-03-12 15:08",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "In negotiations - March 11"
+      }
     },
     {
       "id": "leh_studio",
@@ -292,7 +576,31 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [
+        {
+          "date": "19d3d2171397b512",
+          "from": "2026-03-30 09:04",
+          "subject": "atiqagtfpartnerships@getthefit.ai"
+        },
+        {
+          "date": "19d2eae2444aece5",
+          "from": "2026-03-27 13:44",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        },
+        {
+          "date": "19d288b396d214ed",
+          "from": "2026-03-26 14:00",
+          "subject": "Muskan Parmar <muskanparmar3009@gmail.com>"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "",
+        "last_contact": "",
+        "next_followup": "",
+        "notes": "MUSKAAN NEEDS TO DM - email bounced (communication@graineworld.com), no alternative found. IG: @mannatt.graine (founder Mannat Sethi)"
+      }
     },
     {
       "id": "label_by_jenn",
@@ -313,7 +621,9 @@
         "brand_assets": false,
         "proposal_sent": false
       },
-      "last_updated": "2026-04-07"
+      "last_updated": "2026-04-07",
+      "recent_emails": [],
+      "tracker_data": {}
     }
   ],
   "action_items": [
