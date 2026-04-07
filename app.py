@@ -5,7 +5,6 @@ GitHub-backed persistence + Google Calendar integration
 
 import streamlit as st
 import json
-import subprocess
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
@@ -52,32 +51,25 @@ brands = data.get("brands", [])
 
 # ── Calendar Functions ──
 def get_brand_meetings():
-    """Fetch upcoming brand meetings from Google Calendar"""
+    """Load meetings from GitHub-synced meetings.json (updated by Zoya every 30 mins)"""
+    from github_db import get_headers, REPO, BRANCH
+    import requests, base64
     try:
-        now = datetime.now().strftime("%Y-%m-%dT00:00:00+04:00")
-        future = (datetime.now() + timedelta(days=14)).strftime("%Y-%m-%dT23:59:59+04:00")
-        result = subprocess.run(
-            ["gog", "calendar", "events", "atiqa@getthefit.ai", 
-             "--from", now, "--to", future, 
-             "--account", "atiqa@getthefit.ai", "--json"],
-            capture_output=True, text=True, timeout=15
-        )
-        if result.returncode == 0:
-            events = json.loads(result.stdout)
-            brand_events = []
-            for e in events.get("events", []):
-                summary = e.get("summary", "").lower()
-                # Filter for brand-related meetings
-                brand_keywords = ["brand", "partnership", "onboard", "x get the fit", "x gtf", 
-                                  "label by", "itrh", "bobo", "nikita", "aggunj", "shahin",
-                                  "surily", "sanne", "baroodi", "realm", "leh", "corpora",
-                                  "payal", "ashi", "bloni", "try on dress", "house of oro",
-                                  "h2b", "divya", "meeting"]
-                if any(kw in summary for kw in brand_keywords):
-                    brand_events.append(e)
-            return brand_events
+        headers = get_headers()
+        if headers:
+            url = f"https://api.github.com/repos/{REPO}/contents/meetings.json?ref={BRANCH}"
+            resp = requests.get(url, headers=headers, timeout=10)
+            if resp.status_code == 200:
+                content = base64.b64decode(resp.json()["content"]).decode("utf-8")
+                data = json.loads(content)
+                return data.get("meetings", [])
     except Exception:
         pass
+    # Fallback to local file
+    meetings_file = Path(__file__).parent / "meetings.json"
+    if meetings_file.exists():
+        with open(meetings_file) as f:
+            return json.load(f).get("meetings", [])
     return []
 
 # ── Styles ──
@@ -316,8 +308,8 @@ with tab_calendar:
     
     if meetings:
         for m in meetings:
-            start = m.get("start", {})
-            start_time = start.get("dateTime", start.get("date", ""))
+            start_time = m.get("start", "")
+            # start_time already set above
             summary = m.get("summary", "Untitled")
             description = m.get("description", "")
             location = m.get("location", "")
