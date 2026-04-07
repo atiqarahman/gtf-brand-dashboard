@@ -29,7 +29,7 @@
       "poc": "",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1BX3nhh8oWN2gLhTYQB5EYWENkatK9Wh7",
-      "notes": "CSV and UGC received. Need Shop the Look — they have lots of matching separates. Highlight this to them.",
+      "notes": "CSV and UGC received. Need Shop the Look \u2014 they have lots of matching separates. Highlight this to them.",
       "status_tag": "Waiting on Shop the Look",
       "checklist": {
         "csv_received": true,
@@ -92,7 +92,7 @@
       "poc": "",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/17D5FjoLrW6QEWLat2iJ694TmFWfZF0Q_",
-      "notes": "Need everything — all templates. Gowns only so no Shop the Look needed. Need 40% proposal.",
+      "notes": "Need everything \u2014 all templates. Gowns only so no Shop the Look needed. Need 40% proposal.",
       "status_tag": "Waiting on All Templates",
       "checklist": {
         "csv_received": false,
@@ -155,7 +155,7 @@
       "poc": "Mansi",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1kHlqYyDzW97SzOKE5TPp1nVHcjb1-S73",
-      "notes": "Needs discussion on proposal — Mansi and Atiqa to finalize. Showed everything in person. Need templates + instructions.",
+      "notes": "Needs discussion on proposal \u2014 Mansi and Atiqa to finalize. Showed everything in person. Need templates + instructions.",
       "status_tag": "Waiting on Commission Finalization",
       "checklist": {
         "csv_received": false,
@@ -197,7 +197,7 @@
       "poc": "Thomas",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/197fc4jcmhc50mOOOyHMqBn8ughyaLjww",
-      "notes": "Dynamic commission agreed: 22% standard, 25% customized. Discussion not closed — Atiqa + Thomas need a call to finalize. Need all templates.",
+      "notes": "Dynamic commission agreed: 22% standard, 25% customized. Discussion not closed \u2014 Atiqa + Thomas need a call to finalize. Need all templates.",
       "status_tag": "Waiting on Final Call",
       "checklist": {
         "csv_received": false,
@@ -260,8 +260,8 @@
       "poc": "",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1ReYkQGJ1D1ngbcdN2hmu9774p9vQL-vR",
-      "notes": "Meeting done. Email bounced — Muskaan needs to DM. Need proposal, commission breakdown, marketplace deck, all templates.",
-      "status_tag": "Email Bounced — Need Instagram DM",
+      "notes": "Meeting done. Email bounced \u2014 Muskaan needs to DM. Need proposal, commission breakdown, marketplace deck, all templates.",
+      "status_tag": "Email Bounced \u2014 Need Instagram DM",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -281,8 +281,8 @@
       "poc": "Aanchal",
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1Ep7o9RdwZFwR3AeYJNQv2VAZ7CUpZVI4",
-      "notes": "Replied — wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.",
-      "status_tag": "OVERDUE — Commercials Requested",
+      "notes": "Replied \u2014 wants commercials. Commercials overdue since Mar 22 (10+ days). Need to send proposal + commission breakdown + marketplace deck + all templates ASAP.",
+      "status_tag": "OVERDUE \u2014 Commercials Requested",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
