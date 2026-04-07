@@ -359,6 +359,10 @@ with tab_actions:
                 new_done = st.checkbox("", value=is_done, key=f"action_done_{ai_idx}_{item.get('brand','')}")
                 if new_done != is_done and orig_idx is not None:
                     action_items[orig_idx]["done"] = new_done
+                    # Track who completed it and when for notifications
+                    if new_done:
+                        action_items[orig_idx]["completed_at"] = str(datetime.now())
+                        action_items[orig_idx]["notify_pending"] = True
                     data["action_items"] = action_items
                     save_brands(data, sha, f"Action: {'done' if new_done else 'undone'} - {item['task'][:40]}")
                     st.rerun()
