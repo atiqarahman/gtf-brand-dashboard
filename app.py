@@ -166,7 +166,7 @@ with st.sidebar:
 # ── Main Content ──
 
 # Tab navigation
-tab_brands, tab_calendar = st.tabs(["📋 Brands", "📅 Meetings"])
+tab_brands, tab_calendar, tab_scout = st.tabs(["📋 Brands", "📅 Meetings", "🔍 Brand Scout"])
 
 # ═══════ BRANDS TAB ═══════
 with tab_brands:
@@ -349,6 +349,89 @@ with tab_calendar:
     st.markdown("---")
     st.markdown("*Meetings are pulled from atiqa@getthefit.ai calendar. Any event with brand names or keywords like 'partnership', 'onboard', 'x Get the Fit' will show here.*")
 
+# ═══════ BRAND SCOUT TAB ═══════
+with tab_scout:
+    st.markdown("# 🔍 Brand Scout")
+    st.markdown("*Upload Instagram screenshots of brands. Zoya will identify them and add to the tracker.*")
+    st.markdown("---")
+    
+    # Tracker selection
+    tracker_choice = st.radio("Which tracker?", ["Indian Brands", "International Brands"], horizontal=True, key="tracker_radio")
+    
+    # File uploader
+    uploaded_files = st.file_uploader(
+        "Upload Instagram screenshots (up to 10)", 
+        type=["jpg", "jpeg", "png"],
+        accept_multiple_files=True,
+        key="scout_uploader"
+    )
+    
+    if uploaded_files:
+        st.markdown(f"**{len(uploaded_files)} screenshot(s) uploaded**")
+        
+        # Show thumbnails
+        cols = st.columns(min(len(uploaded_files), 5))
+        for i, f in enumerate(uploaded_files):
+            with cols[i % 5]:
+                st.image(f, caption=f.name, width=150)
+        
+        st.markdown("---")
+        
+        # Save screenshots to a pending folder in the data
+        if st.button("🚀 Send to Zoya for identification", type="primary", key="scout_send"):
+            # Save file info to a scout_queue in brands.json
+            scout_queue = data.get("scout_queue", [])
+            for f in uploaded_files:
+                import base64
+                file_bytes = f.read()
+                scout_queue.append({
+                    "filename": f.name,
+                    "tracker": tracker_choice,
+                    "uploaded_at": str(datetime.now()),
+                    "uploaded_by": "Muskaan",
+                    "status": "pending",
+                    "identified_brand": None,
+                    "website": None,
+                    "instagram": None,
+                    "poc_email": None,
+                    # Store small base64 thumbnail for reference
+                    "thumbnail": base64.b64encode(file_bytes[:50000]).decode() if len(file_bytes) < 50000 else None
+                })
+                f.seek(0)  # Reset file pointer
+            
+            data["scout_queue"] = scout_queue
+            save_brands(data, sha, f"Scout: {len(uploaded_files)} screenshots uploaded")
+            st.success(f"✅ {len(uploaded_files)} screenshots sent to Zoya! She'll identify the brands and update the tracker. You'll see them appear in the Brands tab.")
+            st.balloons()
+    
+    # Show pending identifications
+    scout_queue = data.get("scout_queue", [])
+    pending = [s for s in scout_queue if s["status"] == "pending"]
+    identified = [s for s in scout_queue if s["status"] == "identified"]
+    
+    if pending:
+        st.markdown("---")
+        st.markdown(f"### ⏳ Pending Identification ({len(pending)})")
+        for s in pending:
+            st.markdown(f"- **{s['filename']}** — {s['tracker']} — uploaded {s['uploaded_at'][:16]}")
+    
+    if identified:
+        st.markdown("---")
+        st.markdown(f"### ✅ Recently Identified ({len(identified)})")
+        for s in identified:
+            st.markdown(f"- **{s.get('identified_brand', '?')}** — {s.get('website', '')} — [{s.get('instagram', '')}]")
+    
+    st.markdown("---")
+    st.markdown("""
+    **How it works:**
+    1. Upload Instagram screenshots of brands you've found
+    2. Select which tracker (Indian or International)
+    3. Click 'Send to Zoya'
+    4. Zoya identifies the brand name, website, and contact info
+    5. Brand gets added to the correct tracker sheet automatically
+    6. You then fill in POC details from your DMs
+    """)
+
 # ── Footer ──
 st.markdown("---")
-st.markdown('<div style="text-align:center; color:#888; font-size:11px; padding:20px;">GTF Brand Onboarding Dashboard v2 · Built by Zoya · April 2026</div>', unsafe_allow_html=True)
+st.markdown('<div style="text-align:center; color:#888; font-size:11px; padding:20px;">GTF Brand Onboarding Dashboard v3 · Built by Zoya · April 2026</div>', unsafe_allow_html=True)
