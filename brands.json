@@ -673,7 +673,9 @@
       "assigned": "Muskaan",
       "due": "2026-04-07",
       "brand": "Echo",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-08 12:03:27.042537",
+      "notify_pending": true
     },
     {
       "task": "Send Deepa Gurnani WhatsApp contact to Atiqa",
