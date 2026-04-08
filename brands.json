@@ -689,7 +689,9 @@
       "assigned": "Muskaan",
       "due": "2026-04-08",
       "brand": "Monstand",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-08 12:05:21.593579",
+      "notify_pending": true
     },
     {
       "task": "Send Payal Singhal onboarding folder link",
