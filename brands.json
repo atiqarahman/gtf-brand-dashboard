@@ -624,6 +624,38 @@
       "last_updated": "2026-04-07",
       "recent_emails": [],
       "tracker_data": {}
+    },
+    {
+      "id": "la_fuori",
+      "name": "L\u00e0 Fuori",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "Kiran + Meghan (Objectives NYC)",
+      "poc_email": "Kiran@objectivesnyc.com; Meghan@objectivesnyc.com",
+      "drive_folder": "",
+      "notes": "NYC sustainable luxury \u2014 embroidered gowns, crystal details. Found via Muskaan Instagram DM. Directed to sales team at Objectives NYC. Email sent Apr 8.",
+      "status_tag": "Email Sent \u2014 Awaiting Response",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-08",
+      "recent_emails": [
+        {
+          "date": "2026-04-08",
+          "from": "atiqagtfpartnerships@getthefit.ai",
+          "subject": "Partnership opportunity \u2014 L\u00e0 Fuori x Get The Fit"
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "Muskaan DM - directed to sales",
+        "email_status": "Email sent 8-Apr"
+      }
     }
   ],
   "action_items": [
