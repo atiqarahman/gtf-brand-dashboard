@@ -1,45 +1,50 @@
 {
   "meetings": [
     {
-      "summary": "Jinita sheth : 45 Minute Meeting",
-      "start": "2026-04-09T11:00:00+05:30",
-      "end": "2026-04-09T11:45:00+05:30",
-      "description": "Event Details:\nInvitee: Jinita sheth \nInvitee Email: labeljenn.jinita@gmail.com\nAdditional Guests:\n  divya@labeljenn.com\n\nAdditional details:\nPlease share anything that will help prepare for our meeti",
-      "location": "Google Meet (instructions in description)",
-      "meet_link": ""
+      "brand": "Jinita Sheth",
+      "date": "2026-04-09",
+      "time": "11:00 AM IST",
+      "type": "video_call",
+      "duration": "45 min",
+      "attendees": [
+        "Atiqa"
+      ],
+      "notes": "45 Minute Meeting via Calendly"
     },
     {
-      "summary": "Label by Jenn x Get the Fit \u2014 Divya",
-      "start": "2026-04-09T11:00:00+05:30",
-      "end": "2026-04-09T12:00:00+05:30",
-      "description": "Brand onboarding call with Label by Jenn.\nPOC: Divya (9819331886)\n\nGoogle Meet: https://meet.google.com/ocm-tnpg-pqy\nDial: (US) +1 470-705-4695 PIN: 700 149 142#",
-      "location": "",
-      "meet_link": "https://meet.google.com/ocm-tnpg-pqy"
+      "brand": "Label by Jenn",
+      "date": "2026-04-09",
+      "time": "11:00 AM IST",
+      "type": "video_call",
+      "duration": "60 min",
+      "attendees": [
+        "Atiqa",
+        "Divya"
+      ],
+      "notes": "Label by Jenn x Get the Fit"
     },
     {
-      "summary": "Weekly Sync: Atiqa + Muskaan",
-      "start": "2026-04-09T12:00:00+05:30",
-      "end": "2026-04-09T12:30:00+05:30",
-      "description": "Weekly brand outreach sync - Instagram DMs, warm leads handoff, strategy alignment.",
-      "location": "",
-      "meet_link": ""
+      "brand": "Ishita Verma",
+      "date": "2026-04-09",
+      "time": "12:30 PM IST",
+      "type": "video_call",
+      "duration": "45 min",
+      "attendees": [
+        "Atiqa"
+      ],
+      "notes": "45 Minute Meeting via Calendly"
     },
     {
-      "summary": "In-Person Meeting \u2014 Aseem Kapoor Design Studio, Gurugram",
-      "start": "2026-04-09T15:00:00+05:30",
-      "end": "2026-04-09T17:00:00+05:30",
-      "description": "In-person brand meeting at Aseem Design Studio\n\nAddress: 3rd Floor, 31A, Udyog Vihar, Phase IV Sector 18, Gurugram, Sarhol, Haryana \u2013 122015\nOpposite MUNJAL SHOWA PVT. LTD.\n\nGoogle Maps: https://maps.",
-      "location": "3rd Floor, 31A, Udyog Vihar Phase IV, Sector 18, Gurugram, Haryana 122015",
-      "meet_link": ""
-    },
-    {
-      "summary": "Weekly Sync: Atiqa + Muskaan",
-      "start": "2026-04-16T12:00:00+05:30",
-      "end": "2026-04-16T12:30:00+05:30",
-      "description": "Weekly brand outreach sync - Instagram DMs, warm leads handoff, strategy alignment.",
-      "location": "",
-      "meet_link": ""
+      "brand": "Aseem Kapoor",
+      "date": "2026-04-09",
+      "time": "3:00 PM IST",
+      "type": "in_person",
+      "duration": "2 hours",
+      "attendees": [
+        "Atiqa"
+      ],
+      "notes": "In-Person Meeting \u2014 Aseem Kapoor Design Studio, Gurugram"
     }
   ],
-  "last_synced": "2026-04-07T21:22:00+04:00"
+  "last_synced": "2026-04-08T19:00:19.308154Z"
 }
