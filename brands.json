@@ -752,7 +752,9 @@
       "assigned": "Muskaan",
       "due": "2026-04-11",
       "brand": "Chorus World",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-08 12:04:56.911014",
+      "notify_pending": true
     },
     {
       "task": "Follow up Ashi Studio (Rasha) \u2014 finalize commercials + Calendly",
