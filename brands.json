@@ -750,7 +750,9 @@
       "assigned": "Zoya",
       "due": "2026-04-08",
       "brand": "Label Citara",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-08 12:23:35.750757",
+      "notify_pending": true
     },
     {
       "task": "Send Payal Singhal onboarding folder link",
