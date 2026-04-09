@@ -658,17 +658,30 @@
       "tracker_data": {}
     },
     {
+      "id": 17,
       "name": "Aseem Kapoor",
-      "status": "proposal_sent",
+      "stage": "In Talks",
       "commission": "35%",
-      "contact": "",
-      "instagram": "aseemkapoor",
-      "website": "aseemkapoor.com",
-      "category": "Indian Designer",
+      "poc": "",
+      "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1sfp7DLGneorEQKxjFW77BZEPGJimQ1Rw",
       "notes": "In-person meeting Apr 9 Gurugram studio. Agreed to send digital lookbooks + CSVs first. Preliminary 35% proposal sent.",
-      "proposal_sent_date": "2026-04-09",
-      "follow_up_date": "2026-04-14"
+      "status_tag": "proposal_sent",
+      "checklist": {
+        "csv_received": false,
+        "images_received": false,
+        "proposal_sent": true,
+        "contract_signed": false
+      },
+      "last_updated": "2026-04-09",
+      "recent_emails": [],
+      "tracker_data": {
+        "instagram": "aseemkapoor",
+        "website": "aseemkapoor.com",
+        "category": "Indian Designer",
+        "proposal_sent_date": "2026-04-09",
+        "follow_up_date": "2026-04-14"
+      }
     }
   ],
   "action_items": [
