@@ -685,6 +685,33 @@
         "proposal_sent_date": "2026-04-09",
         "follow_up_date": "2026-04-14"
       }
+    },
+    {
+      "id": 18,
+      "name": "Capisvirleo",
+      "stage": "In Talks",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1Fm75fAHkQtzjd8oEw-e9oEgYe4WHKY4W",
+      "notes": "Indian brand \u2014 sustainable luxury, handcrafted, Indo-western. Website: belafuori.com. On Revolve, Moda Operandi, Mytheresa, Bloomingdale's ME. Initial outreach Apr 8, they asked about wholesale \u2014 clarified marketplace model.",
+      "status_tag": "proposal_sent",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-09",
+      "recent_emails": [],
+      "tracker_data": {
+        "instagram": "lafuori_outthere",
+        "website": "belafuori.com",
+        "category": "Indian Designer"
+      }
     }
   ],
   "action_items": [
