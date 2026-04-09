@@ -99,7 +99,7 @@
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/1JiPj2R-J2BAXwsosZ7KgKGnIZyV1cbqX",
       "notes": "CSV received. Need UGC video template and Shop the Look. Need to revert to them.",
-      "status_tag": "Waiting on UGC Videos",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": true,
         "ugc_videos": false,
@@ -107,9 +107,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": true,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-09",
       "recent_emails": [
         {
           "date": "19d5eb008eda09df",
@@ -138,7 +138,7 @@
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/16JYiqdW-xyzBJfvOhOk7wyZ__XRrZ6U_",
       "notes": "CSV received. Need Shop the Look and UGC videos. Need 40% proposal and marketplace update.",
-      "status_tag": "Waiting on UGC Videos",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": true,
         "ugc_videos": false,
@@ -146,9 +146,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": true,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-09",
       "recent_emails": [
         {
           "date": "19d5c08932b2a2a9",
@@ -440,7 +440,7 @@
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/17D5FjoLrW6QEWLat2iJ694TmFWfZF0Q_",
       "notes": "Need everything \u2014 all templates. Gowns only so no Shop the Look needed. Need 40% proposal.",
-      "status_tag": "Waiting on All Templates",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -448,9 +448,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-09",
       "recent_emails": [],
       "tracker_data": {}
     },
@@ -553,7 +553,7 @@
       "poc_email": "",
       "drive_folder": "https://drive.google.com/drive/folders/197fc4jcmhc50mOOOyHMqBn8ughyaLjww",
       "notes": "Dynamic commission agreed: 22% standard, 25% customized. Discussion not closed \u2014 Atiqa + Thomas need a call to finalize. Need all templates.",
-      "status_tag": "Waiting on Final Call",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -561,9 +561,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-09",
       "recent_emails": [
         {
           "date": "19d2eae2444aece5",
