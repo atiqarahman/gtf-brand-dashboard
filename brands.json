@@ -669,9 +669,12 @@
       "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
-        "images_received": false,
-        "proposal_sent": true,
-        "contract_signed": false
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
       },
       "last_updated": "2026-04-09",
       "recent_emails": [],
