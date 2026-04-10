@@ -1,50 +1,16 @@
 {
   "meetings": [
     {
-      "brand": "Jinita Sheth",
-      "date": "2026-04-09",
-      "time": "11:00 AM IST",
+      "brand": "House of Oro",
+      "date": "2026-04-10",
+      "time": "5:00 PM IST",
       "type": "video_call",
-      "duration": "45 min",
+      "duration": "30 min",
       "attendees": [
         "Atiqa"
       ],
-      "notes": "45 Minute Meeting via Calendly"
-    },
-    {
-      "brand": "Label by Jenn",
-      "date": "2026-04-09",
-      "time": "11:00 AM IST",
-      "type": "video_call",
-      "duration": "60 min",
-      "attendees": [
-        "Atiqa",
-        "Divya"
-      ],
-      "notes": "Label by Jenn x Get the Fit"
-    },
-    {
-      "brand": "Ishita Verma",
-      "date": "2026-04-09",
-      "time": "12:30 PM IST",
-      "type": "video_call",
-      "duration": "45 min",
-      "attendees": [
-        "Atiqa"
-      ],
-      "notes": "45 Minute Meeting via Calendly"
-    },
-    {
-      "brand": "Aseem Kapoor",
-      "date": "2026-04-09",
-      "time": "3:00 PM IST",
-      "type": "in_person",
-      "duration": "2 hours",
-      "attendees": [
-        "Atiqa"
-      ],
-      "notes": "In-Person Meeting \u2014 Aseem Kapoor Design Studio, Gurugram"
+      "notes": "Brand partnership call"
     }
   ],
-  "last_synced": "2026-04-08T19:00:19.308154Z"
+  "last_synced": "2026-04-10T09:24:34.947603Z"
 }
