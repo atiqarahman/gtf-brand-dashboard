@@ -341,9 +341,12 @@ textarea { resize: vertical; min-height: 60px; }
         </div>
     </div>
 
-    <!-- SUBMIT -->
-    <button class="submit-btn" onclick="submitDay()">📤 Send to Zoya</button>
-    <p style="text-align:center;font-size:12px;color:#888;margin-bottom:40px;">This generates a summary and copies it to your clipboard. Paste it to Zoya on Telegram.</p>
+    <!-- SAVE + SUBMIT -->
+    <button class="submit-btn" style="background:#16a34a;" onclick="saveProgress()">💾 Save Progress</button>
+    <p id="saveStatus" style="text-align:center;font-size:12px;color:#16a34a;margin-bottom:12px;display:none;">✅ Saved! Keep filling out throughout the day.</p>
+    
+    <button class="submit-btn" onclick="submitDay()">📤 End of Day — Send to Zoya</button>
+    <p style="text-align:center;font-size:12px;color:#888;margin-bottom:40px;">Save throughout the day. Submit once at night.</p>
 
 </div>
 
@@ -358,8 +361,33 @@ function formatDate(d) {
 }
 
 function changeDate(delta) {
+    // Save current day before switching
+    const hasAnyData = document.getElementById('weight').value || document.getElementById('breakfast').value || document.getElementById('steps').value;
+    if (hasAnyData) saveProgress();
+    
     currentDate.setDate(currentDate.getDate() + delta);
     document.getElementById('currentDate').textContent = formatDate(currentDate);
+    
+    // Clear all fields then load saved data for new date
+    clearForm();
+    loadProgress();
+}
+
+function clearForm() {
+    const fields = ['weight','waist','hips','sleepHours','whoopRecovery','sleepNotes',
+        'breakfast','bfCal','bfProtein','bfSugar','lunch','lCal','lProtein','lSugar',
+        'dinner','dCal','dProtein','dSugar','snacks','sCal','sProtein','sSugar',
+        'water','workoutDuration','steps','workoutNotes','moodNotes'];
+    fields.forEach(f => { const el = document.getElementById(f); if(el) el.value = ''; });
+    document.getElementById('workoutType').value = '';
+    document.getElementById('bedTime').value = '00:00';
+    document.getElementById('wakeTime').value = '08:00';
+    for(let i=1;i<=7;i++) document.getElementById('chk'+i).checked = false;
+    document.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
+    selectedMoods = {};
+    document.getElementById('exerciseList').innerHTML = '';
+    exerciseCount = 0;
+    updateScores();
 }
 
 function selectMood(el, type) {
@@ -543,8 +571,133 @@ function getExerciseSummary() {
     return summary;
 }
 
+// SAVE & LOAD FROM LOCAL STORAGE
+function getDateKey() {
+    return currentDate.toISOString().split('T')[0];
+}
+
+function saveProgress() {
+    const data = {
+        weight: document.getElementById('weight').value,
+        waist: document.getElementById('waist').value,
+        hips: document.getElementById('hips').value,
+        bedTime: document.getElementById('bedTime').value,
+        wakeTime: document.getElementById('wakeTime').value,
+        sleepHours: document.getElementById('sleepHours').value,
+        whoopRecovery: document.getElementById('whoopRecovery').value,
+        sleepNotes: document.getElementById('sleepNotes').value,
+        breakfast: document.getElementById('breakfast').value,
+        bfCal: document.getElementById('bfCal').value,
+        bfProtein: document.getElementById('bfProtein').value,
+        bfSugar: document.getElementById('bfSugar').value,
+        lunch: document.getElementById('lunch').value,
+        lCal: document.getElementById('lCal').value,
+        lProtein: document.getElementById('lProtein').value,
+        lSugar: document.getElementById('lSugar').value,
+        dinner: document.getElementById('dinner').value,
+        dCal: document.getElementById('dCal').value,
+        dProtein: document.getElementById('dProtein').value,
+        dSugar: document.getElementById('dSugar').value,
+        snacks: document.getElementById('snacks').value,
+        sCal: document.getElementById('sCal').value,
+        sProtein: document.getElementById('sProtein').value,
+        sSugar: document.getElementById('sSugar').value,
+        water: document.getElementById('water').value,
+        workoutType: document.getElementById('workoutType').value,
+        workoutDuration: document.getElementById('workoutDuration').value,
+        steps: document.getElementById('steps').value,
+        workoutNotes: document.getElementById('workoutNotes').value,
+        moodNotes: document.getElementById('moodNotes').value,
+        moods: {...selectedMoods},
+        checklist: [1,2,3,4,5,6,7].map(i => document.getElementById('chk'+i).checked),
+        exercises: getExerciseData(),
+        savedAt: new Date().toISOString()
+    };
+    localStorage.setItem('tracker-' + getDateKey(), JSON.stringify(data));
+    
+    const status = document.getElementById('saveStatus');
+    status.style.display = 'block';
+    status.textContent = '\u2705 Saved at ' + new Date().toLocaleTimeString('en-US', {hour:'numeric', minute:'2-digit'}) + ' — keep filling out!';
+    setTimeout(() => { status.style.display = 'none'; }, 3000);
+}
+
+function getExerciseData() {
+    const rows = document.querySelectorAll('.exercise-row');
+    const exercises = [];
+    rows.forEach(row => {
+        const inputs = row.querySelectorAll('input');
+        exercises.push({
+            name: inputs[0].value,
+            sets: inputs[1].value,
+            reps: inputs[2].value,
+            weight: inputs[3].value
+        });
+    });
+    return exercises;
+}
+
+function loadProgress() {
+    const saved = localStorage.getItem('tracker-' + getDateKey());
+    if (!saved) return;
+    
+    const data = JSON.parse(saved);
+    
+    // Restore all fields
+    const fields = ['weight','waist','hips','bedTime','wakeTime','sleepHours','whoopRecovery','sleepNotes',
+        'breakfast','bfCal','bfProtein','bfSugar','lunch','lCal','lProtein','lSugar',
+        'dinner','dCal','dProtein','dSugar','snacks','sCal','sProtein','sSugar',
+        'water','workoutType','workoutDuration','steps','workoutNotes','moodNotes'];
+    
+    fields.forEach(f => {
+        const el = document.getElementById(f);
+        if (el && data[f] !== undefined) el.value = data[f];
+    });
+    
+    // Restore checklist
+    if (data.checklist) {
+        data.checklist.forEach((checked, i) => {
+            document.getElementById('chk'+(i+1)).checked = checked;
+        });
+    }
+    
+    // Restore moods
+    if (data.moods) {
+        selectedMoods = {...data.moods};
+        ['energy','stress'].forEach(type => {
+            if (selectedMoods[type]) {
+                document.querySelectorAll('.mood-row').forEach(row => {
+                    row.querySelectorAll('.mood-btn').forEach(btn => {
+                        if (btn.textContent === selectedMoods[type] && 
+                            btn.closest('.form-group').querySelector('.form-label').textContent.toLowerCase().includes(type)) {
+                            btn.classList.add('selected');
+                        }
+                    });
+                });
+            }
+        });
+    }
+    
+    // Restore exercises
+    if (data.exercises && data.exercises.length > 0) {
+        document.getElementById('exerciseList').innerHTML = '';
+        exerciseCount = 0;
+        data.exercises.forEach(ex => addExercise(ex.name, ex.sets, ex.reps, ex.weight));
+    }
+    
+    updateScores();
+}
+
+// Auto-save every 30 seconds
+setInterval(() => {
+    const hasAnyData = document.getElementById('weight').value || 
+        document.getElementById('breakfast').value || 
+        document.getElementById('steps').value;
+    if (hasAnyData) saveProgress();
+}, 30000);
+
 // Init
 document.getElementById('currentDate').textContent = formatDate(currentDate);
+loadProgress();
 </script>
 
 </body>
