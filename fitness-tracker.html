@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atiqa's Daily Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; background: #f8f8f8; color: #1a1a1a; min-height: 100vh; }
+
+.header { background: #0a0a0a; color: #fff; padding: 20px 24px; position: sticky; top: 0; z-index: 100; }
+.header h1 { font-size: 20px; font-weight: 700; }
+.header p { font-size: 12px; color: #888; margin-top: 4px; }
+
+.container { max-width: 600px; margin: 0 auto; padding: 16px; }
+
+.date-nav { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; margin-bottom: 8px; }
+.date-nav button { background: none; border: 1px solid #ddd; border-radius: 6px; padding: 6px 12px; font-size: 13px; cursor: pointer; }
+.date-nav .current-date { font-size: 16px; font-weight: 600; }
+
+/* SCORE CARD */
+.score-card { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 16px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.score-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px; }
+.score-item { text-align: center; padding: 12px 8px; background: #f8f8f8; border-radius: 8px; }
+.score-val { font-size: 24px; font-weight: 700; }
+.score-target { font-size: 11px; color: #888; }
+.score-label { font-size: 11px; color: #666; margin-top: 2px; }
+.score-val.good { color: #16a34a; }
+.score-val.warn { color: #ea580c; }
+.score-val.bad { color: #dc2626; }
+
+/* SECTION */
+.section { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.section-title { font-size: 14px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+
+/* FORM ELEMENTS */
+.form-group { margin-bottom: 14px; }
+.form-label { font-size: 12px; font-weight: 600; color: #555; margin-bottom: 4px; display: block; }
+.form-sublabel { font-size: 11px; color: #999; margin-bottom: 4px; display: block; }
+input[type="number"], input[type="text"], input[type="time"], textarea, select {
+    width: 100%; padding: 10px 12px; border: 1px solid #e0e0e0; border-radius: 8px;
+    font-size: 14px; font-family: 'Inter', sans-serif; background: #fafafa;
+    transition: border-color 0.2s;
+}
+input:focus, textarea:focus, select:focus { outline: none; border-color: #0a0a0a; background: #fff; }
+textarea { resize: vertical; min-height: 60px; }
+
+.input-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.input-row-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+
+/* MEAL SECTION */
+.meal-block { background: #f8f8f8; border-radius: 8px; padding: 14px; margin-bottom: 10px; }
+.meal-header { font-size: 13px; font-weight: 600; margin-bottom: 8px; }
+
+/* CHECKLIST */
+.check-item { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.check-item:last-child { border: none; }
+.check-item input[type="checkbox"] { width: 20px; height: 20px; accent-color: #16a34a; }
+.check-item.done { color: #888; text-decoration: line-through; }
+
+/* MOOD */
+.mood-row { display: flex; gap: 8px; }
+.mood-btn { flex: 1; padding: 10px; text-align: center; border: 1px solid #e0e0e0; border-radius: 8px; font-size: 20px; cursor: pointer; background: #fff; transition: all 0.15s; }
+.mood-btn:hover { border-color: #0a0a0a; }
+.mood-btn.selected { background: #0a0a0a; border-color: #0a0a0a; transform: scale(1.05); }
+
+/* SUBMIT */
+.submit-btn { width: 100%; padding: 16px; background: #0a0a0a; color: #fff; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; margin: 20px 0; }
+.submit-btn:hover { background: #333; }
+
+/* PROGRESS BAR */
+.progress-bar { height: 6px; background: #e5e5e5; border-radius: 3px; overflow: hidden; margin-top: 4px; }
+.progress-fill { height: 100%; border-radius: 3px; transition: width 0.3s; }
+.progress-fill.good { background: #16a34a; }
+.progress-fill.warn { background: #ea580c; }
+.progress-fill.bad { background: #dc2626; }
+
+/* HISTORY */
+.history-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+.streak { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; background: #dcfce7; color: #166534; border-radius: 100px; font-size: 12px; font-weight: 600; }
+
+/* EXERCISE LOG */
+.exercise-row { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: 6px; margin-bottom: 6px; align-items: center; }
+.exercise-row input, .exercise-row select { padding: 8px 10px; border: 1px solid #e0e0e0; border-radius: 6px; font-size: 13px; font-family: 'Inter', sans-serif; background: #fafafa; }
+.exercise-row input:focus { outline: none; border-color: #0a0a0a; background: #fff; }
+.exercise-header { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr auto; gap: 6px; margin-bottom: 8px; font-size: 11px; font-weight: 600; color: #888; }
+.remove-btn { width: 32px; height: 32px; border: 1px solid #e0e0e0; border-radius: 6px; background: #fff; cursor: pointer; font-size: 14px; display: flex; align-items: center; justify-content: center; color: #dc2626; }
+.remove-btn:hover { background: #fee2e2; }
+.add-exercise-btn { width: 100%; padding: 10px; border: 1px dashed #ccc; border-radius: 8px; background: #fafafa; cursor: pointer; font-size: 13px; font-weight: 500; color: #666; text-align: center; margin-top: 8px; }
+.add-exercise-btn:hover { border-color: #0a0a0a; color: #0a0a0a; background: #f0f0f0; }
+</style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Daily Tracker</h1>
+    <p>Log everything → Send to Zoya → Get daily feedback</p>
+</div>
+
+<div class="container">
+
+    <!-- DATE -->
+    <div class="date-nav">
+        <button onclick="changeDate(-1)">← Yesterday</button>
+        <span class="current-date" id="currentDate"></span>
+        <button onclick="changeDate(1)">Tomorrow →</button>
+    </div>
+
+    <!-- QUICK SCORE -->
+    <div class="score-card">
+        <div style="font-size:13px;font-weight:600;">Today's Scorecard</div>
+        <div class="score-row">
+            <div class="score-item">
+                <div class="score-val" id="calScore">—</div>
+                <div class="score-label">Calories</div>
+                <div class="score-target">Target: 1,550</div>
+            </div>
+            <div class="score-item">
+                <div class="score-val" id="proteinScore">—</div>
+                <div class="score-label">Protein</div>
+                <div class="score-target">Target: 120g</div>
+            </div>
+            <div class="score-item">
+                <div class="score-val" id="sugarScore">—</div>
+                <div class="score-label">Sugar</div>
+                <div class="score-target">Target: <50g</div>
+            </div>
+        </div>
+        <div class="score-row">
+            <div class="score-item">
+                <div class="score-val" id="stepsScore">—</div>
+                <div class="score-label">Steps</div>
+                <div class="score-target">Target: 15K</div>
+            </div>
+            <div class="score-item">
+                <div class="score-val" id="sleepScore">—</div>
+                <div class="score-label">Sleep</div>
+                <div class="score-target">Target: 7h+</div>
+            </div>
+            <div class="score-item">
+                <div class="score-val" id="waterScore">—</div>
+                <div class="score-label">Water (L)</div>
+                <div class="score-target">Target: 2.5L</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BODY -->
+    <div class="section">
+        <div class="section-title">⚖️ Body</div>
+        <div class="input-row-3">
+            <div class="form-group">
+                <label class="form-label">Weight (kg)</label>
+                <input type="number" id="weight" step="0.1" placeholder="58.0" oninput="updateScores()">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Waist (cm)</label>
+                <input type="number" id="waist" step="0.5" placeholder="Weekly">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Hips (cm)</label>
+                <input type="number" id="hips" step="0.5" placeholder="Weekly">
+            </div>
+        </div>
+    </div>
+
+    <!-- SLEEP -->
+    <div class="section">
+        <div class="section-title">😴 Sleep</div>
+        <div class="input-row">
+            <div class="form-group">
+                <label class="form-label">Bed time</label>
+                <input type="time" id="bedTime" value="00:00">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Wake time</label>
+                <input type="time" id="wakeTime" value="08:00" oninput="updateScores()">
+            </div>
+        </div>
+        <div class="input-row">
+            <div class="form-group">
+                <label class="form-label">Sleep hours</label>
+                <input type="number" id="sleepHours" step="0.5" placeholder="7.5" oninput="updateScores()">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Whoop recovery %</label>
+                <input type="number" id="whoopRecovery" placeholder="65">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Sleep quality notes</label>
+            <input type="text" id="sleepNotes" placeholder="Woke up once, took 20min to fall asleep...">
+        </div>
+    </div>
+
+    <!-- NUTRITION -->
+    <div class="section">
+        <div class="section-title">🍽 Nutrition</div>
+        
+        <div class="meal-block">
+            <div class="meal-header">🌅 Breakfast</div>
+            <div class="form-group">
+                <textarea id="breakfast" placeholder="3 eggs + ½ avocado + spinach + sourdough"></textarea>
+            </div>
+            <div class="input-row-3">
+                <div class="form-group"><label class="form-label">Cal</label><input type="number" id="bfCal" placeholder="400" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Protein</label><input type="number" id="bfProtein" placeholder="28" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Sugar</label><input type="number" id="bfSugar" placeholder="2" oninput="updateScores()"></div>
+            </div>
+        </div>
+
+        <div class="meal-block">
+            <div class="meal-header">🥗 Lunch</div>
+            <div class="form-group">
+                <textarea id="lunch" placeholder="150g chicken + ½ cup rice + big salad + olive oil"></textarea>
+            </div>
+            <div class="input-row-3">
+                <div class="form-group"><label class="form-label">Cal</label><input type="number" id="lCal" placeholder="450" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Protein</label><input type="number" id="lProtein" placeholder="40" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Sugar</label><input type="number" id="lSugar" placeholder="4" oninput="updateScores()"></div>
+            </div>
+        </div>
+
+        <div class="meal-block">
+            <div class="meal-header">🌙 Dinner</div>
+            <div class="form-group">
+                <textarea id="dinner" placeholder="200g chicken + steamed veggies + olive oil"></textarea>
+            </div>
+            <div class="input-row-3">
+                <div class="form-group"><label class="form-label">Cal</label><input type="number" id="dCal" placeholder="400" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Protein</label><input type="number" id="dProtein" placeholder="45" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Sugar</label><input type="number" id="dSugar" placeholder="4" oninput="updateScores()"></div>
+            </div>
+        </div>
+
+        <div class="meal-block">
+            <div class="meal-header">🍎 Snacks</div>
+            <div class="form-group">
+                <textarea id="snacks" placeholder="Apple + 10 almonds"></textarea>
+            </div>
+            <div class="input-row-3">
+                <div class="form-group"><label class="form-label">Cal</label><input type="number" id="sCal" placeholder="200" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Protein</label><input type="number" id="sProtein" placeholder="6" oninput="updateScores()"></div>
+                <div class="form-group"><label class="form-label">Sugar</label><input type="number" id="sSugar" placeholder="14" oninput="updateScores()"></div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Water intake (litres)</label>
+            <input type="number" id="water" step="0.5" placeholder="2.5" oninput="updateScores()">
+        </div>
+    </div>
+
+    <!-- TRAINING -->
+    <div class="section">
+        <div class="section-title">🏋️ Training</div>
+        <div class="form-group">
+            <label class="form-label">Workout type</label>
+            <select id="workoutType" onchange="loadDefaultExercises()">
+                <option value="">Rest day</option>
+                <option value="lower">Lower Body Strength</option>
+                <option value="upper">Upper Body Strength</option>
+                <option value="full">Full Body Strength</option>
+                <option value="zone2">Zone 2 Cardio</option>
+                <option value="hiit">HIIT</option>
+                <option value="walk">Active Rest / Walk</option>
+            </select>
+        </div>
+        <div class="input-row">
+            <div class="form-group">
+                <label class="form-label">Duration (min)</label>
+                <input type="number" id="workoutDuration" placeholder="45">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Steps today</label>
+                <input type="number" id="steps" placeholder="15000" oninput="updateScores()">
+            </div>
+        </div>
+
+        <!-- EXERCISE LOG -->
+        <div class="form-group" id="exerciseSection" style="margin-top:12px;">
+            <label class="form-label">Exercises (edit freely — add/remove as needed)</label>
+            <div class="exercise-header">
+                <span>Exercise</span>
+                <span>Sets</span>
+                <span>Reps</span>
+                <span>Weight</span>
+                <span></span>
+            </div>
+            <div id="exerciseList"></div>
+            <div class="add-exercise-btn" onclick="addExercise('','','','')">
+                + Add Exercise
+            </div>
+        </div>
+
+        <div class="form-group" style="margin-top:12px;">
+            <label class="form-label">Workout notes</label>
+            <textarea id="workoutNotes" placeholder="Gym only had dumbbells today. Swapped barbell hip thrust for DB glute bridge. Felt good."></textarea>
+        </div>
+    </div>
+
+    <!-- DAILY CHECKLIST -->
+    <div class="section">
+        <div class="section-title">✅ Daily Non-Negotiables</div>
+        <div class="check-item"><input type="checkbox" id="chk1"> Sugar under 50g</div>
+        <div class="check-item"><input type="checkbox" id="chk2"> Ate a real lunch (400+ cal, 35g+ protein)</div>
+        <div class="check-item"><input type="checkbox" id="chk3"> 15K+ steps</div>
+        <div class="check-item"><input type="checkbox" id="chk4"> Probiotics taken (morning)</div>
+        <div class="check-item"><input type="checkbox" id="chk5"> Supplements taken (evening)</div>
+        <div class="check-item"><input type="checkbox" id="chk6"> In bed by midnight (weekday) / 1am (weekend)</div>
+        <div class="check-item"><input type="checkbox" id="chk7"> Post-dinner walk</div>
+    </div>
+
+    <!-- MOOD & ENERGY -->
+    <div class="section">
+        <div class="section-title">🧠 How You Feel</div>
+        <div class="form-group">
+            <label class="form-label">Energy level</label>
+            <div class="mood-row">
+                <div class="mood-btn" onclick="selectMood(this, 'energy')">😴</div>
+                <div class="mood-btn" onclick="selectMood(this, 'energy')">😐</div>
+                <div class="mood-btn" onclick="selectMood(this, 'energy')">🙂</div>
+                <div class="mood-btn" onclick="selectMood(this, 'energy')">😊</div>
+                <div class="mood-btn" onclick="selectMood(this, 'energy')">🔥</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Stress level</label>
+            <div class="mood-row">
+                <div class="mood-btn" onclick="selectMood(this, 'stress')">😌</div>
+                <div class="mood-btn" onclick="selectMood(this, 'stress')">🙂</div>
+                <div class="mood-btn" onclick="selectMood(this, 'stress')">😐</div>
+                <div class="mood-btn" onclick="selectMood(this, 'stress')">😤</div>
+                <div class="mood-btn" onclick="selectMood(this, 'stress')">🤯</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Notes / how you're feeling</label>
+            <textarea id="moodNotes" placeholder="Feeling bloated today... or... energy was great after lunch..."></textarea>
+        </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <button class="submit-btn" onclick="submitDay()">📤 Send to Zoya</button>
+    <p style="text-align:center;font-size:12px;color:#888;margin-bottom:40px;">This generates a summary and copies it to your clipboard. Paste it to Zoya on Telegram.</p>
+
+</div>
+
+<script>
+let currentDate = new Date();
+let selectedMoods = {};
+
+function formatDate(d) {
+    const days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return `${days[d.getDay()]}, ${months[d.getMonth()]} ${d.getDate()}`;
+}
+
+function changeDate(delta) {
+    currentDate.setDate(currentDate.getDate() + delta);
+    document.getElementById('currentDate').textContent = formatDate(currentDate);
+}
+
+function selectMood(el, type) {
+    el.parentNode.querySelectorAll('.mood-btn').forEach(b => b.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedMoods[type] = el.textContent;
+}
+
+function updateScores() {
+    const cal = (parseInt(document.getElementById('bfCal').value)||0) + (parseInt(document.getElementById('lCal').value)||0) + (parseInt(document.getElementById('dCal').value)||0) + (parseInt(document.getElementById('sCal').value)||0);
+    const protein = (parseInt(document.getElementById('bfProtein').value)||0) + (parseInt(document.getElementById('lProtein').value)||0) + (parseInt(document.getElementById('dProtein').value)||0) + (parseInt(document.getElementById('sProtein').value)||0);
+    const sugar = (parseInt(document.getElementById('bfSugar').value)||0) + (parseInt(document.getElementById('lSugar').value)||0) + (parseInt(document.getElementById('dSugar').value)||0) + (parseInt(document.getElementById('sSugar').value)||0);
+    const steps = parseInt(document.getElementById('steps').value) || 0;
+    const sleep = parseFloat(document.getElementById('sleepHours').value) || 0;
+    const water = parseFloat(document.getElementById('water').value) || 0;
+
+    const calEl = document.getElementById('calScore');
+    calEl.textContent = cal || '—';
+    calEl.className = 'score-val ' + (cal >= 1400 && cal <= 1650 ? 'good' : cal > 1650 ? 'warn' : '');
+
+    const protEl = document.getElementById('proteinScore');
+    protEl.textContent = protein ? protein + 'g' : '—';
+    protEl.className = 'score-val ' + (protein >= 110 ? 'good' : protein >= 90 ? 'warn' : '');
+
+    const sugEl = document.getElementById('sugarScore');
+    sugEl.textContent = sugar ? sugar + 'g' : '—';
+    sugEl.className = 'score-val ' + (sugar <= 50 ? 'good' : sugar <= 70 ? 'warn' : 'bad');
+
+    const stepEl = document.getElementById('stepsScore');
+    stepEl.textContent = steps ? (steps/1000).toFixed(1) + 'K' : '—';
+    stepEl.className = 'score-val ' + (steps >= 15000 ? 'good' : steps >= 12000 ? 'warn' : 'bad');
+
+    const sleepEl = document.getElementById('sleepScore');
+    sleepEl.textContent = sleep ? sleep + 'h' : '—';
+    sleepEl.className = 'score-val ' + (sleep >= 7 ? 'good' : sleep >= 6 ? 'warn' : 'bad');
+
+    const waterEl = document.getElementById('waterScore');
+    waterEl.textContent = water ? water + 'L' : '—';
+    waterEl.className = 'score-val ' + (water >= 2.5 ? 'good' : water >= 2 ? 'warn' : 'bad');
+}
+
+function submitDay() {
+    const cal = (parseInt(document.getElementById('bfCal').value)||0) + (parseInt(document.getElementById('lCal').value)||0) + (parseInt(document.getElementById('dCal').value)||0) + (parseInt(document.getElementById('sCal').value)||0);
+    const protein = (parseInt(document.getElementById('bfProtein').value)||0) + (parseInt(document.getElementById('lProtein').value)||0) + (parseInt(document.getElementById('dProtein').value)||0) + (parseInt(document.getElementById('sProtein').value)||0);
+    const sugar = (parseInt(document.getElementById('bfSugar').value)||0) + (parseInt(document.getElementById('lSugar').value)||0) + (parseInt(document.getElementById('dSugar').value)||0) + (parseInt(document.getElementById('sSugar').value)||0);
+
+    const checklist = [];
+    for (let i = 1; i <= 7; i++) {
+        const chk = document.getElementById('chk'+i);
+        checklist.push(chk.checked ? '✅' : '❌');
+    }
+
+    const summary = `📊 DAILY LOG — ${formatDate(currentDate)}
+
+⚖️ Weight: ${document.getElementById('weight').value || 'not logged'} kg
+📏 Waist: ${document.getElementById('waist').value || '—'} cm | Hips: ${document.getElementById('hips').value || '—'} cm
+
+😴 Sleep: ${document.getElementById('sleepHours').value || '—'}h (${document.getElementById('bedTime').value} → ${document.getElementById('wakeTime').value}) | Whoop: ${document.getElementById('whoopRecovery').value || '—'}%
+${document.getElementById('sleepNotes').value ? '   Notes: ' + document.getElementById('sleepNotes').value : ''}
+
+🍽 Nutrition:
+  Breakfast: ${document.getElementById('breakfast').value || '—'} (${document.getElementById('bfCal').value||0} cal, ${document.getElementById('bfProtein').value||0}g P, ${document.getElementById('bfSugar').value||0}g sugar)
+  Lunch: ${document.getElementById('lunch').value || '—'} (${document.getElementById('lCal').value||0} cal, ${document.getElementById('lProtein').value||0}g P, ${document.getElementById('lSugar').value||0}g sugar)
+  Dinner: ${document.getElementById('dinner').value || '—'} (${document.getElementById('dCal').value||0} cal, ${document.getElementById('dProtein').value||0}g P, ${document.getElementById('dSugar').value||0}g sugar)
+  Snacks: ${document.getElementById('snacks').value || '—'} (${document.getElementById('sCal').value||0} cal, ${document.getElementById('sCal').value||0}g P, ${document.getElementById('sSugar').value||0}g sugar)
+  TOTAL: ${cal} cal | ${protein}g protein | ${sugar}g sugar
+  💧 Water: ${document.getElementById('water').value || '—'}L
+
+🏋️ Training: ${document.getElementById('workoutType').value || 'Rest'} | ${document.getElementById('workoutDuration').value || '—'} min
+${getExerciseSummary()}🚶 Steps: ${document.getElementById('steps').value || '—'}
+${document.getElementById('workoutNotes').value ? '   Notes: ' + document.getElementById('workoutNotes').value : ''}
+
+✅ Checklist:
+  ${checklist[0]} Sugar under 50g
+  ${checklist[1]} Real lunch (400+ cal)
+  ${checklist[2]} 15K+ steps
+  ${checklist[3]} Probiotics
+  ${checklist[4]} Evening supplements
+  ${checklist[5]} Bed by midnight
+  ${checklist[6]} Post-dinner walk
+
+🧠 Energy: ${selectedMoods.energy || '—'} | Stress: ${selectedMoods.stress || '—'}
+${document.getElementById('moodNotes').value ? '   Notes: ' + document.getElementById('moodNotes').value : ''}`;
+
+    navigator.clipboard.writeText(summary).then(() => {
+        alert('✅ Copied to clipboard! Paste it to Zoya on Telegram.');
+    }).catch(() => {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = summary;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        alert('✅ Copied! Paste it to Zoya on Telegram.');
+    });
+}
+
+// EXERCISE MANAGEMENT
+let exerciseCount = 0;
+
+const defaultExercises = {
+    lower: [
+        ['Barbell Hip Thrust', '4', '10', '100kg'],
+        ['Romanian Deadlift (DB)', '4', '10', '15kg each'],
+        ['Bulgarian Split Squat', '3', '10', '12.5kg each'],
+        ['Leg Press', '3', '12', ''],
+        ['Cable Kickback', '3', '12', ''],
+        ['Calf Raises', '3', '15', 'BW']
+    ],
+    upper: [
+        ['DB Bench Press', '4', '10', '10-12.5kg'],
+        ['Bent Over Row', '4', '10', '12.5-15kg'],
+        ['Overhead Press', '3', '10', '8-10kg'],
+        ['Lat Pulldown', '3', '12', ''],
+        ['Tricep Dips', '3', '12', 'BW'],
+        ['Bicep Curl + Hammer', '3', '10', '7.5kg']
+    ],
+    full: [
+        ['Barbell Deadlift', '4', '8', '50-60kg'],
+        ['Goblet Squat', '3', '12', '16-20kg'],
+        ['Push-ups', '3', 'max', 'BW'],
+        ['Cable Row', '3', '12', ''],
+        ['Walking Lunges', '3', '12', '10kg each'],
+        ['Plank Hold', '3', '45s', 'BW']
+    ],
+    zone2: [
+        ['Elliptical / Run', '1', '45min', 'Zone 2-3']
+    ],
+    hiit: [
+        ['Warm-up', '1', '5min', 'Easy'],
+        ['Sprint Intervals', '8', '30s on / 60s off', 'All out'],
+        ['Cool-down', '1', '5min', 'Easy']
+    ],
+    walk: [
+        ['Walk', '1', '60min', 'Easy pace']
+    ]
+};
+
+function addExercise(name, sets, reps, weight) {
+    exerciseCount++;
+    const id = exerciseCount;
+    const row = document.createElement('div');
+    row.className = 'exercise-row';
+    row.id = 'ex-' + id;
+    row.innerHTML = `
+        <input type="text" placeholder="Exercise name" value="${name}">
+        <input type="text" placeholder="Sets" value="${sets}">
+        <input type="text" placeholder="Reps" value="${reps}">
+        <input type="text" placeholder="Weight" value="${weight}">
+        <button class="remove-btn" onclick="removeExercise(${id})">✕</button>
+    `;
+    document.getElementById('exerciseList').appendChild(row);
+}
+
+function removeExercise(id) {
+    const el = document.getElementById('ex-' + id);
+    if (el) el.remove();
+}
+
+function loadDefaultExercises() {
+    const type = document.getElementById('workoutType').value;
+    const list = document.getElementById('exerciseList');
+    list.innerHTML = '';
+    exerciseCount = 0;
+    
+    if (defaultExercises[type]) {
+        defaultExercises[type].forEach(ex => addExercise(ex[0], ex[1], ex[2], ex[3]));
+    }
+}
+
+function getExerciseSummary() {
+    const rows = document.querySelectorAll('.exercise-row');
+    let summary = '';
+    rows.forEach(row => {
+        const inputs = row.querySelectorAll('input');
+        if (inputs[0].value) {
+            summary += `  ${inputs[0].value}: ${inputs[1].value}×${inputs[2].value} @ ${inputs[3].value || 'BW'}\n`;
+        }
+    });
+    return summary;
+}
+
+// Init
+document.getElementById('currentDate').textContent = formatDate(currentDate);
+</script>
+
+</body>
+</html>
