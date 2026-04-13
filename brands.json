@@ -562,9 +562,9 @@
       "commission": "TBD",
       "poc": "",
       "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1yC9CQw9vJAq72r4Qgn8AC_xmb_qWLDRP",
+      "drive_folder": "https://drive.google.com/drive/folders/1M1MEds4s7jtjNCvB6Dtj9rrIeD0kqPfO",
       "notes": "Need all templates. Commission to be finalized by Atiqa. Contract overdue since Mar 27.",
-      "status_tag": "Waiting on Commission Agreement",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -572,9 +572,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-13",
       "recent_emails": [
         {
           "date": "19d68071f05d887b",
@@ -607,9 +607,9 @@
       "commission": "40%",
       "poc": "Aayushi Chaplot",
       "poc_email": "surilygofficial@gmail.com",
-      "drive_folder": "https://drive.google.com/drive/folders/1FmgRoXgYXjI7sbAsJ3ruNY-U4nTsL9Im",
+      "drive_folder": "https://drive.google.com/drive/folders/1zh-VCE4ghSRUXwx2YEjRJNaSdVxmz7f1",
       "notes": "Met in person only. Haven't shown or talked work yet. Need full marketplace explanation + proposal + all templates.",
-      "status_tag": "Needs Full Pitch",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -617,9 +617,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-13",
       "recent_emails": [
         {
           "date": "19d0ff4cc79fa762",
@@ -652,9 +652,9 @@
       "commission": "40%",
       "poc": "",
       "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1nRKMlvm0wORXV8q3GTzz6qStOWmK72mt",
+      "drive_folder": "https://drive.google.com/drive/folders/1XEKruuzxrxN8NFiDjPxNJoPT3d7Yuxt-",
       "notes": "Need all templates. Marketplace essence PDF. Commission breakdown proposal.",
-      "status_tag": "Waiting on All Templates",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -662,9 +662,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-13",
       "recent_emails": [
         {
           "date": "19d68071f05d887b",
@@ -697,9 +697,9 @@
       "commission": "40%",
       "poc": "Divya",
       "poc_email": "9819331886",
-      "drive_folder": "",
+      "drive_folder": "https://drive.google.com/drive/folders/1u_2MpdlNMHTNwC0C_jcXYcVPqavRFlFD",
       "notes": "Meeting scheduled Apr 8 at 11 AM IST",
-      "status_tag": "New \u2014 Setup Needed",
+      "status_tag": "proposal_sent",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
@@ -707,9 +707,9 @@
         "import_export_license": false,
         "commission_agreed": false,
         "brand_assets": false,
-        "proposal_sent": false
+        "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-13",
       "recent_emails": [],
       "tracker_data": {}
     }
