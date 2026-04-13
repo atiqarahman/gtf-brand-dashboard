@@ -737,15 +737,6 @@
       "done": false
     },
     {
-      "task": "WhatsApp Yavi brand \u2014 no response",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "YAVI",
-      "done": true,
-      "completed_at": "2026-04-13 03:05:52.596417",
-      "notify_pending": true
-    },
-    {
       "task": "WhatsApp Mishru",
       "assigned": "Atiqa",
       "due": "2026-04-09",
@@ -757,7 +748,9 @@
       "assigned": "Atiqa",
       "due": "2026-04-09",
       "brand": "Rimple & Harpreet",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-13 03:06:04.746754",
+      "notify_pending": true
     },
     {
       "task": "Follow up Bloni if no Calendly booking",
@@ -833,6 +826,15 @@
       "done": true,
       "completed_at": "2026-04-08 12:23:35.750757",
       "notify_pending": false
+    },
+    {
+      "task": "WhatsApp Yavi brand \u2014 no response",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "YAVI",
+      "done": true,
+      "completed_at": "2026-04-13 03:05:52.596417",
+      "notify_pending": true
     },
     {
       "task": "DM Chorus World on Instagram",
