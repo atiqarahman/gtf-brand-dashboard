@@ -730,15 +730,6 @@
       "done": false
     },
     {
-      "task": "Send Aggunj templates folder link",
-      "assigned": "Atiqa",
-      "due": "2026-04-08",
-      "brand": "Aggunj",
-      "done": true,
-      "completed_at": "2026-04-13 03:05:42.791480",
-      "notify_pending": true
-    },
-    {
       "task": "WhatsApp Baroodi founder (POC group chat)",
       "assigned": "Atiqa",
       "due": "2026-04-09",
@@ -750,7 +741,9 @@
       "assigned": "Atiqa",
       "due": "2026-04-09",
       "brand": "YAVI",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-13 03:05:52.596417",
+      "notify_pending": true
     },
     {
       "task": "WhatsApp Mishru",
@@ -813,6 +806,15 @@
       "done": true,
       "completed_at": "2026-04-07 20:55:03.753428",
       "notify_pending": false
+    },
+    {
+      "task": "Send Aggunj templates folder link",
+      "assigned": "Atiqa",
+      "due": "2026-04-08",
+      "brand": "Aggunj",
+      "done": true,
+      "completed_at": "2026-04-13 03:05:42.791480",
+      "notify_pending": true
     },
     {
       "task": "DM Monstand on Instagram \u2014 get their email",
