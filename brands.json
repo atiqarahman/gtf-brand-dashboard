@@ -720,7 +720,9 @@
       "assigned": "Muskaan",
       "due": "2026-04-07",
       "brand": "Deepa Gurnani",
-      "done": false
+      "done": true,
+      "completed_at": "2026-04-15 11:11:53.549602",
+      "notify_pending": true
     },
     {
       "task": "Send Payal Singhal onboarding folder link",
@@ -742,15 +744,6 @@
       "due": "2026-04-09",
       "brand": "Mishru",
       "done": false
-    },
-    {
-      "task": "Follow up Rimple and Harpreet directly",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "Rimple & Harpreet",
-      "done": true,
-      "completed_at": "2026-04-13 03:06:04.746754",
-      "notify_pending": true
     },
     {
       "task": "Follow up Bloni if no Calendly booking",
@@ -826,6 +819,15 @@
       "done": true,
       "completed_at": "2026-04-08 12:23:35.750757",
       "notify_pending": false
+    },
+    {
+      "task": "Follow up Rimple and Harpreet directly",
+      "assigned": "Atiqa",
+      "due": "2026-04-09",
+      "brand": "Rimple & Harpreet",
+      "done": true,
+      "completed_at": "2026-04-13 03:06:04.746754",
+      "notify_pending": true
     },
     {
       "task": "WhatsApp Yavi brand \u2014 no response",
