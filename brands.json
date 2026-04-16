@@ -234,11 +234,11 @@
         "ugc_videos": false,
         "shop_the_look": false,
         "import_export_license": false,
-        "commission_agreed": false,
+        "commission_agreed": true,
         "brand_assets": false,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-16",
       "recent_emails": [
         {
           "date": "19d2eae2444aece5",
