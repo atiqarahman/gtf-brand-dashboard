@@ -13,13 +13,13 @@
       "checklist": {
         "csv_received": true,
         "ugc_videos": true,
-        "shop_the_look": false,
+        "shop_the_look": true,
         "import_export_license": true,
         "commission_agreed": true,
         "brand_assets": true,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-17",
       "recent_emails": [
         {
           "date": "19d5c08932b2a2a9",
@@ -49,10 +49,10 @@
       "id": "itrh",
       "name": "ITRH",
       "stage": "Onboarded",
-      "commission": "40%",
+      "commission": "35%",
       "poc": "",
       "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1nE6bhigwqf1rTrPxXVJ95Qcd1LBk-D5G",
+      "drive_folder": "https://drive.google.com/drive/folders/1RyPZC-8sb0itqax3Ih6UooznBBnTrR-P",
       "notes": "Need update on import/export license. UGC videos pending. Shop the Look template needed. Sending them on what\u2019s app the shop look template and also the UGC video and proposal too. ",
       "status_tag": "Waiting on UGC Videos",
       "checklist": {
@@ -64,7 +64,7 @@
         "brand_assets": true,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-17",
       "recent_emails": [
         {
           "date": "19d5c08932b2a2a9",
@@ -222,7 +222,7 @@
     {
       "id": "shahin_mannan",
       "name": "Shahin Mannan",
-      "stage": "In Talks",
+      "stage": "Negotiating",
       "commission": "35%",
       "poc": "Mansi",
       "poc_email": "",
@@ -238,7 +238,7 @@
         "brand_assets": false,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-16",
+      "last_updated": "2026-04-17",
       "recent_emails": [
         {
           "date": "19d2eae2444aece5",
@@ -267,11 +267,11 @@
     {
       "id": "leh_studio",
       "name": "LEH Studio",
-      "stage": "In Talks",
-      "commission": "40%",
+      "stage": "Negotiating",
+      "commission": "30%",
       "poc": "",
       "poc_email": "",
-      "drive_folder": "https://drive.google.com/drive/folders/1ReYkQGJ1D1ngbcdN2hmu9774p9vQL-vR",
+      "drive_folder": "https://drive.google.com/drive/folders/1IWfaig8n8Kk9-fFQesG8qGa74WQWDafX",
       "notes": "Meeting done. Email bounced \u2014 Muskaan needs to DM. Need proposal, commission breakdown, marketplace deck, all templates.",
       "status_tag": "Email Bounced \u2014 Need Instagram DM",
       "checklist": {
@@ -283,7 +283,7 @@
         "brand_assets": false,
         "proposal_sent": true
       },
-      "last_updated": "2026-04-07",
+      "last_updated": "2026-04-17",
       "recent_emails": [
         {
           "date": "19d3d2171397b512",
