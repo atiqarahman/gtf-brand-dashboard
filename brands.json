@@ -712,168 +712,64 @@
       "last_updated": "2026-04-13",
       "recent_emails": [],
       "tracker_data": {}
-    }
-  ],
-  "action_items": [
-    {
-      "task": "Send Deepa Gurnani WhatsApp contact to Atiqa",
-      "assigned": "Muskaan",
-      "due": "2026-04-07",
-      "brand": "Deepa Gurnani",
-      "done": true,
-      "completed_at": "2026-04-15 11:11:53.549602",
-      "notify_pending": true
     },
     {
-      "task": "Send Payal Singhal onboarding folder link",
-      "assigned": "Atiqa",
-      "due": "2026-04-08",
-      "brand": "Payal Singhal",
-      "done": false
-    },
-    {
-      "task": "WhatsApp Baroodi founder (POC group chat)",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "BAROODI",
-      "done": false
-    },
-    {
-      "task": "WhatsApp Mishru",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "Mishru",
-      "done": false
-    },
-    {
-      "task": "Follow up Bloni if no Calendly booking",
-      "assigned": "Zoya",
-      "due": "2026-04-10",
-      "brand": "Bloni",
-      "done": false
-    },
-    {
-      "task": "Follow up Chorus World email",
-      "assigned": "Zoya",
-      "due": "2026-04-11",
-      "brand": "Chorus World",
-      "done": false
-    },
-    {
-      "task": "Follow up Ashi Studio (Rasha) \u2014 finalize commercials + Calendly",
-      "assigned": "Zoya",
-      "due": "2026-04-11",
-      "brand": "Ashi Studio",
-      "done": false
-    },
-    {
-      "task": "WhatsApp Bodhi Tree \u2014 follow up on status",
-      "assigned": "Muskaan",
-      "due": "2026-04-07",
-      "brand": "Bodhi Tree",
-      "done": true,
-      "completed_at": "2026-04-08 12:02:27.990359",
-      "notify_pending": true
-    },
-    {
-      "task": "WhatsApp Echo \u2014 follow up",
-      "assigned": "Muskaan",
-      "due": "2026-04-07",
-      "brand": "Echo",
-      "done": true,
-      "completed_at": "2026-04-08 12:03:27.042537",
-      "notify_pending": true
-    },
-    {
-      "task": "Send Corpora Studio the Google Drive folder",
-      "assigned": "Atiqa",
-      "due": "2026-04-07",
-      "brand": "Corpora Studio",
-      "done": true,
-      "completed_at": "2026-04-07 20:55:03.753428",
-      "notify_pending": false
-    },
-    {
-      "task": "Send Aggunj templates folder link",
-      "assigned": "Atiqa",
-      "due": "2026-04-08",
-      "brand": "Aggunj",
-      "done": true,
-      "completed_at": "2026-04-13 03:05:42.791480",
-      "notify_pending": true
-    },
-    {
-      "task": "DM Monstand on Instagram \u2014 get their email",
-      "assigned": "Muskaan",
-      "due": "2026-04-08",
-      "brand": "Monstand",
-      "done": true,
-      "completed_at": "2026-04-08 12:05:21.593579",
-      "notify_pending": true
-    },
-    {
-      "task": "Send fresh follow-up to Label Citara (Anjali) \u2014 17 days cold",
-      "assigned": "Zoya",
-      "due": "2026-04-08",
-      "brand": "Label Citara",
-      "done": true,
-      "completed_at": "2026-04-08 12:23:35.750757",
-      "notify_pending": false
-    },
-    {
-      "task": "Follow up Rimple and Harpreet directly",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "Rimple & Harpreet",
-      "done": true,
-      "completed_at": "2026-04-13 03:06:04.746754",
-      "notify_pending": true
-    },
-    {
-      "task": "WhatsApp Yavi brand \u2014 no response",
-      "assigned": "Atiqa",
-      "due": "2026-04-09",
-      "brand": "YAVI",
-      "done": true,
-      "completed_at": "2026-04-13 03:05:52.596417",
-      "notify_pending": true
-    },
-    {
-      "task": "DM Chorus World on Instagram",
-      "assigned": "Muskaan",
-      "due": "2026-04-11",
-      "brand": "Chorus World",
-      "done": true,
-      "completed_at": "2026-04-20 07:28:50.355974",
-      "notify_pending": true
-    },
-    {
-      "task": "update with Surily G ",
-      "assigned": "Atiqa",
-      "due": "2026-04-20",
-      "brand": "Surily G ",
-      "done": false
-    },
-    {
-      "task": "update with Maya Parikh ",
-      "assigned": "Atiqa",
-      "due": "2026-04-20",
-      "brand": " Maya Parikh ",
-      "done": false
-    },
-    {
-      "task": "update with Dilnaz (Mumbai )",
-      "assigned": "Atiqa",
-      "due": "2026-04-20",
-      "brand": "Dilnaz",
-      "done": false
-    },
-    {
-      "task": "update with mirchi by kim ",
-      "assigned": "Atiqa",
-      "due": "2026-04-20",
-      "brand": "mirchi by kim ",
-      "done": false
+      "id": "dilnaz",
+      "name": "Dilnaz",
+      "stage": "In Progress",
+      "commission": "",
+      "poc": "",
+      "poc_email": "dilnazmk@gmail.com",
+      "drive_folder": "",
+      "notes": "Met in Mumbai Apr 20. Action items:\n1. Create group chat with POC \u2014 by Tuesday Apr 21 LATEST\n2. Dilnaz to send V1 curation by end of week (Friday Apr 25)\n3. Dilnaz to send look books for Atiqa to review\n4. Atiqa to pull out picks and send back by Friday Apr 25\n\nMuskaan updated via email.",
+      "status_tag": "Waiting on Group Chat + V1 Curation",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-20",
+      "action_items": [
+        {
+          "task": "Create group chat with Dilnaz POC",
+          "assigned_to": "Atiqa",
+          "due": "2026-04-21",
+          "status": "pending",
+          "notify_pending": false
+        },
+        {
+          "task": "Dilnaz V1 curation delivery",
+          "assigned_to": "Dilnaz",
+          "due": "2026-04-25",
+          "status": "pending",
+          "notify_pending": false
+        },
+        {
+          "task": "Dilnaz to send look books",
+          "assigned_to": "Dilnaz",
+          "due": "2026-04-25",
+          "status": "pending",
+          "notify_pending": false
+        },
+        {
+          "task": "Atiqa review look books + send picks back",
+          "assigned_to": "Atiqa",
+          "due": "2026-04-25",
+          "status": "pending",
+          "notify_pending": false
+        }
+      ],
+      "tracker_data": {
+        "instagram_status": "",
+        "email_status": "Proposal sent Apr 17",
+        "last_contact": "2026-04-20",
+        "next_followup": "2026-04-21",
+        "notes": "Met in Mumbai. Group chat by tomorrow, V1 curation by Friday."
+      }
     }
   ]
 }
