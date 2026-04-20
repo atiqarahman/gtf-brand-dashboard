@@ -846,6 +846,13 @@
       "done": true,
       "completed_at": "2026-04-20 07:28:50.355974",
       "notify_pending": true
+    },
+    {
+      "task": "update with Surily G ",
+      "assigned": "Atiqa",
+      "due": "2026-04-20",
+      "brand": "Surily G ",
+      "done": false
     }
   ]
 }
