@@ -716,13 +716,13 @@
     {
       "id": "dilnaz",
       "name": "Dilnaz",
-      "stage": "In Progress",
+      "stage": "In Talks",
       "commission": "",
       "poc": "",
       "poc_email": "dilnazmk@gmail.com",
       "drive_folder": "",
-      "notes": "Met in Mumbai Apr 20. Action items:\n1. Create group chat with POC \u2014 by Tuesday Apr 21 LATEST\n2. Dilnaz to send V1 curation by end of week (Friday Apr 25)\n3. Dilnaz to send look books for Atiqa to review\n4. Atiqa to pull out picks and send back by Friday Apr 25\n\nMuskaan updated via email.",
-      "status_tag": "Waiting on Group Chat + V1 Curation",
+      "notes": "Met in Mumbai Apr 20. Action items:\n1. Create group chat with POC \u2014 by Tuesday Apr 21 LATEST\n2. Dilnaz to send V1 curation by end of week (Friday Apr 25)\n3. Dilnaz to send look books for Atiqa to review\n4. Atiqa to pull out picks and send back by Friday Apr 25\n\nMuskan updated via email.",
+      "status_tag": "Waiting on CSV",
       "checklist": {
         "csv_received": false,
         "ugc_videos": false,
