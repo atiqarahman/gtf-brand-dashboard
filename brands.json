@@ -770,6 +770,35 @@
         "next_followup": "2026-04-21",
         "notes": "Met in Mumbai. Group chat by tomorrow, V1 curation by Friday."
       }
+    },
+    {
+      "id": "lamin_apparel",
+      "name": "Lamin Apparel",
+      "stage": "Proposal Sent",
+      "commission": "40%",
+      "poc": "",
+      "poc_email": "lamin.onlineleader@gmail.com",
+      "drive_folder": "https://drive.google.com/drive/folders/1fWhffIBFTxqAzQTKYGWHTA1Io-rw9oQa",
+      "notes": "Vietnam-based brand. Connected via Muskaan Instagram DM. Had Google Meet call Apr 21. Requested full partnership proposal. Proposal sent Apr 22.",
+      "status_tag": "Proposal Sent \u2014 Awaiting Response",
+      "checklist": {
+        "csv_received": false,
+        "ugc_videos": false,
+        "shop_the_look": false,
+        "import_export_license": false,
+        "commission_agreed": false,
+        "brand_assets": false,
+        "proposal_sent": true
+      },
+      "last_updated": "2026-04-22",
+      "action_items": [],
+      "tracker_data": {
+        "instagram_status": "DM sent by Muskaan",
+        "email_status": "Proposal sent Apr 22",
+        "last_contact": "2026-04-22",
+        "next_followup": "2026-04-25",
+        "notes": "International brand (Vietnam). Met via Google Meet. Awaiting proposal review."
+      }
     }
   ]
 }
