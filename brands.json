@@ -799,6 +799,29 @@
         "next_followup": "2026-04-25",
         "notes": "International brand (Vietnam). Met via Google Meet. Awaiting proposal review."
       }
+    },
+    {
+      "name": "Studio Picante",
+      "poc": "Shruti Agrawal (Founder)",
+      "poc_email": "founder@studiopicante.in",
+      "instagram": "@studiopicante.in",
+      "website": "studiopicante.in",
+      "status": "proposal_sent",
+      "origin": "India (Mumbai)",
+      "category": "Elevated Resort Wear / Evening Wear",
+      "price_range": "Premium",
+      "notes": "Istituto Marangoni trained. ~60 products on Shopify. Met in person Apr 28. Proposal + logistics guide sent same day.",
+      "action_items": [
+        {
+          "task": "Follow up next week for call scheduling",
+          "assigned_to": "Muskaan",
+          "due": "2026-05-05",
+          "status": "pending",
+          "notify_pending": false
+        }
+      ],
+      "drive_folder": "https://drive.google.com/drive/folders/1UnnhLBYwpjYjtm_mSvbYi65jdjQGo2n0",
+      "added_date": "2026-04-28"
     }
   ]
 }
