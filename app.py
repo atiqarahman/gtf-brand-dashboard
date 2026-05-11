@@ -104,12 +104,12 @@ with st.sidebar:
     st.markdown("---")
     
     total = len(brands)
-    onboarded = sum(1 for b in brands if b["stage"] == "Onboarded")
-    in_talks = sum(1 for b in brands if b["stage"] == "In Talks")
-    negotiating = sum(1 for b in brands if b["stage"] == "Negotiating")
+    onboarded = sum(1 for b in brands if b.get("stage") == "Onboarded")
+    in_talks = sum(1 for b in brands if b.get("stage") == "In Talks")
+    negotiating = sum(1 for b in brands if b.get("stage") == "Negotiating")
     
-    total_items = sum(sum(1 for v in b["checklist"].values()) for b in brands)
-    done_items = sum(sum(1 for v in b["checklist"].values() if v) for b in brands)
+    total_items = sum(sum(1 for v in b.get("checklist", {}).values()) for b in brands)
+    done_items = sum(sum(1 for v in b.get("checklist", {}).values() if v) for b in brands)
     completion = (done_items / total_items * 100) if total_items > 0 else 0
     
     col1, col2 = st.columns(2)
@@ -176,9 +176,9 @@ with tab_brands:
     # Quick stats
     col1, col2, col3, col4, col5 = st.columns(5)
     overdue_count = sum(1 for b in brands if "OVERDUE" in b.get("status_tag", ""))
-    waiting_csv = sum(1 for b in brands if not b["checklist"]["csv_received"])
-    waiting_ugc = sum(1 for b in brands if not b["checklist"]["ugc_videos"] and b["checklist"]["csv_received"])
-    waiting_commission = sum(1 for b in brands if not b["checklist"]["commission_agreed"])
+    waiting_csv = sum(1 for b in brands if not b.get("checklist", {}).get("csv_received", False))
+    waiting_ugc = sum(1 for b in brands if not b.get("checklist", {}).get("ugc_videos", False) and b.get("checklist", {}).get("csv_received", False))
+    waiting_commission = sum(1 for b in brands if not b.get("checklist", {}).get("commission_agreed", False))
     
     col1.markdown(f'<div class="metric-box"><div class="metric-num" style="color:#dc2626;">{overdue_count}</div><div class="metric-label">Overdue</div></div>', unsafe_allow_html=True)
     col2.markdown(f'<div class="metric-box"><div class="metric-num">{waiting_csv}</div><div class="metric-label">Need CSV</div></div>', unsafe_allow_html=True)
@@ -189,12 +189,12 @@ with tab_brands:
     st.markdown("---")
     
     # Brand cards
-    filtered = brands if stage_filter == "All" else [b for b in brands if b["stage"] == stage_filter]
+    filtered = brands if stage_filter == "All" else [b for b in brands if b.get("stage") == stage_filter]
     
     def sort_key(b):
         is_overdue = "OVERDUE" in b.get("status_tag", "")
-        done = sum(1 for v in b["checklist"].values() if v)
-        total_c = len(b["checklist"])
+        done = sum(1 for v in b.get("checklist", {}).values() if v)
+        total_c = len(b.get("checklist", {}))
         return (not is_overdue, -done/total_c if total_c > 0 else 0)
     
     filtered.sort(key=sort_key)
