@@ -10,7 +10,43 @@
         "Atiqa"
       ],
       "notes": "Brand partnership call"
+    },
+    {
+      "brand": "Apsara by Dipti",
+      "date": "2026-06-22",
+      "time": "3:00 PM Dubai",
+      "type": "video_call",
+      "duration": "45 min",
+      "attendees": [
+        "Atiqa",
+        "Muskaan"
+      ],
+      "calendar_id": "s9tbe4s5f7lu0b1425giv009v8",
+      "notes": "GTFx Apsarabydipti brand meeting"
+    },
+    {
+      "brand": "Aseem Kapoor",
+      "date": "2026-06-22",
+      "time": "3:45 PM Dubai",
+      "type": "video_call",
+      "duration": "60 min",
+      "attendees": [
+        "Atiqa"
+      ],
+      "calendar_id": "GTF x Aseem Kapoor",
+      "notes": "Brand partnership meeting \u2014 also scheduled Jun 23 3:45 PM"
+    },
+    {
+      "brand": "Aseem Kapoor",
+      "date": "2026-06-23",
+      "time": "3:45 PM Dubai",
+      "type": "video_call",
+      "duration": "60 min",
+      "attendees": [
+        "Atiqa"
+      ],
+      "notes": "Follow-up / continuation of Jun 22 meeting"
     }
   ],
-  "last_synced": "2026-04-10T09:24:34.947603Z"
+  "last_synced": "2026-06-22T13:36:38.070730Z"
 }
