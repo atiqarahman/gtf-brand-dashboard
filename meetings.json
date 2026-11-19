@@ -1,10 +1,296 @@
-[
-  {
-    "summary": "Weekly Sync: Atiqa + Muskaan",
-    "start": "2026-08-20T10:30:00+04:00",
-    "end": "2026-08-20T11:00:00+04:00",
-    "attendees": ["atiqa@getthefit.ai", "muskanparmar3009@gmail.com"],
-    "meet_link": "https://meet.google.com/vrr-fyek-kzu",
-    "description": "Weekly brand outreach sync - Instagram DMs, warm leads handoff, strategy alignment."
-  }
-]
+{
+  "events": [
+    {
+      "attendees": [
+        {
+          "email": "atiqa@getthefit.ai",
+          "organizer": true,
+          "responseStatus": "accepted",
+          "self": true
+        },
+        {
+          "email": "muskanparmar3009@gmail.com",
+          "responseStatus": "accepted"
+        }
+      ],
+      "conferenceData": {
+        "conferenceId": "vrr-fyek-kzu",
+        "conferenceSolution": {
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet"
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "label": "meet.google.com/vrr-fyek-kzu",
+            "uri": "https://meet.google.com/vrr-fyek-kzu"
+          },
+          {
+            "entryPointType": "more",
+            "pin": "6819838887525",
+            "uri": "https://tel.meet/vrr-fyek-kzu?pin=6819838887525"
+          },
+          {
+            "entryPointType": "phone",
+            "label": "+1 315-925-6410",
+            "pin": "531489942",
+            "regionCode": "US",
+            "uri": "tel:+1-315-925-6410"
+          }
+        ]
+      },
+      "created": "2026-02-13T09:38:59.000Z",
+      "creator": {
+        "email": "atiqa@getthefit.ai",
+        "self": true
+      },
+      "description": "Weekly brand outreach sync - Instagram DMs, warm leads handoff, strategy alignment.",
+      "end": {
+        "dateTime": "2026-11-19T11:00:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "etag": "\"3590070853045790\"",
+      "eventType": "default",
+      "hangoutLink": "https://meet.google.com/vrr-fyek-kzu",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dmZ0amViczM0ZWZzcTFmaWwwaHEzcDhmNmtfMjAyNjExMTlUMDYzMDAwWiBhdGlxYUBnZXR0aGVmaXQuYWk",
+      "iCalUID": "vftjebs34efsq1fil0hq3p8f6k@google.com",
+      "id": "vftjebs34efsq1fil0hq3p8f6k_20261119T063000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "atiqa@getthefit.ai",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-11-19T10:30:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "recurringEventId": "vftjebs34efsq1fil0hq3p8f6k",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-11-19T10:30:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "status": "confirmed",
+      "summary": "Weekly Sync: Atiqa + Muskaan",
+      "updated": "2026-11-18T20:57:06.522Z"
+    },
+    {
+      "attendees": [
+        {
+          "email": "atiqa@getthefit.ai",
+          "responseStatus": "needsAction",
+          "self": true
+        },
+        {
+          "email": "muskanparmar3009@gmail.com",
+          "organizer": true,
+          "responseStatus": "accepted"
+        },
+        {
+          "email": "community@labelankitajain.com",
+          "responseStatus": "needsAction"
+        }
+      ],
+      "conferenceData": {
+        "conferenceId": "pvn-gqxe-ede",
+        "conferenceSolution": {
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet"
+        },
+        "createRequest": {
+          "conferenceSolutionKey": {
+            "type": "hangoutsMeet"
+          },
+          "requestId": "n41r835f0rq320r1agbhqbt0dk",
+          "status": {
+            "statusCode": "success"
+          }
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "label": "meet.google.com/pvn-gqxe-ede",
+            "uri": "https://meet.google.com/pvn-gqxe-ede"
+          }
+        ]
+      },
+      "created": "2026-11-19T07:05:45.000Z",
+      "creator": {
+        "email": "muskanparmar3009@gmail.com"
+      },
+      "end": {
+        "dateTime": "2026-11-19T15:30:00+04:00",
+        "timeZone": "Asia/Kolkata"
+      },
+      "etag": "\"3590143922400798\"",
+      "eventType": "default",
+      "hangoutLink": "https://meet.google.com/pvn-gqxe-ede",
+      "htmlLink": "https://www.google.com/calendar/event?eid=c240aWZxOXBnaGhjcHE3YTJic2V0bTZ0dTggYXRpcWFAZ2V0dGhlZml0LmFp",
+      "iCalUID": "sn4ifq9pghhcpq7a2bsetm6tu8@google.com",
+      "id": "sn4ifq9pghhcpq7a2bsetm6tu8",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "muskanparmar3009@gmail.com"
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-11-19T13:30:00+04:00",
+        "timeZone": "Asia/Kolkata"
+      },
+      "status": "confirmed",
+      "summary": "GTF x Ankita Jain",
+      "updated": "2026-11-19T07:06:01.200Z"
+    },
+    {
+      "attendees": [
+        {
+          "email": "atiqa@getthefit.ai",
+          "responseStatus": "needsAction",
+          "self": true
+        },
+        {
+          "email": "muskanparmar3009@gmail.com",
+          "organizer": true,
+          "responseStatus": "accepted"
+        }
+      ],
+      "conferenceData": {
+        "conferenceId": "rbg-ponx-hem",
+        "conferenceSolution": {
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet"
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "label": "meet.google.com/rbg-ponx-hem",
+            "uri": "https://meet.google.com/rbg-ponx-hem"
+          }
+        ]
+      },
+      "created": "2026-11-18T10:13:53.000Z",
+      "creator": {
+        "email": "muskanparmar3009@gmail.com"
+      },
+      "end": {
+        "dateTime": "2026-11-23T18:00:00+04:00",
+        "timeZone": "Asia/Kolkata"
+      },
+      "etag": "\"3589993692447422\"",
+      "eventType": "default",
+      "hangoutLink": "https://meet.google.com/rbg-ponx-hem",
+      "htmlLink": "https://www.google.com/calendar/event?eid=MG9hczdqY3Ntc2dydnQ3MmlqMWp2MG5ocTQgYXRpcWFAZ2V0dGhlZml0LmFp",
+      "iCalUID": "0oas7jcsmsgrvt72ij1jv0nhq4@google.com",
+      "id": "0oas7jcsmsgrvt72ij1jv0nhq4",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "muskanparmar3009@gmail.com"
+      },
+      "reminders": {
+        "useDefault": true
+      },
+      "start": {
+        "dateTime": "2026-11-23T17:00:00+04:00",
+        "timeZone": "Asia/Kolkata"
+      },
+      "status": "confirmed",
+      "summary": "GTF x How She Wears it",
+      "updated": "2026-11-18T10:14:06.223Z"
+    },
+    {
+      "attendees": [
+        {
+          "email": "atiqa@getthefit.ai",
+          "organizer": true,
+          "responseStatus": "accepted",
+          "self": true
+        },
+        {
+          "email": "muskanparmar3009@gmail.com",
+          "responseStatus": "accepted"
+        }
+      ],
+      "conferenceData": {
+        "conferenceId": "vrr-fyek-kzu",
+        "conferenceSolution": {
+          "iconUri": "https://fonts.gstatic.com/s/i/productlogos/meet_2020q4/v6/web-512dp/logo_meet_2020q4_color_2x_web_512dp.png",
+          "key": {
+            "type": "hangoutsMeet"
+          },
+          "name": "Google Meet"
+        },
+        "entryPoints": [
+          {
+            "entryPointType": "video",
+            "label": "meet.google.com/vrr-fyek-kzu",
+            "uri": "https://meet.google.com/vrr-fyek-kzu"
+          },
+          {
+            "entryPointType": "more",
+            "pin": "6819838887525",
+            "uri": "https://tel.meet/vrr-fyek-kzu?pin=6819838887525"
+          },
+          {
+            "entryPointType": "phone",
+            "label": "+1 315-925-6410",
+            "pin": "531489942",
+            "regionCode": "US",
+            "uri": "tel:+1-315-925-6410"
+          }
+        ]
+      },
+      "created": "2026-02-13T09:38:59.000Z",
+      "creator": {
+        "email": "atiqa@getthefit.ai",
+        "self": true
+      },
+      "description": "Weekly brand outreach sync - Instagram DMs, warm leads handoff, strategy alignment.",
+      "end": {
+        "dateTime": "2026-11-26T11:00:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "etag": "\"3590070853045790\"",
+      "eventType": "default",
+      "hangoutLink": "https://meet.google.com/vrr-fyek-kzu",
+      "htmlLink": "https://www.google.com/calendar/event?eid=dmZ0amViczM0ZWZzcTFmaWwwaHEzcDhmNmtfMjAyNjExMjZUMDYzMDAwWiBhdGlxYUBnZXR0aGVmaXQuYWk",
+      "iCalUID": "vftjebs34efsq1fil0hq3p8f6k@google.com",
+      "id": "vftjebs34efsq1fil0hq3p8f6k_20261126T063000Z",
+      "kind": "calendar#event",
+      "organizer": {
+        "email": "atiqa@getthefit.ai",
+        "self": true
+      },
+      "originalStartTime": {
+        "dateTime": "2026-11-26T10:30:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "recurringEventId": "vftjebs34efsq1fil0hq3p8f6k",
+      "reminders": {
+        "useDefault": true
+      },
+      "sequence": 1,
+      "start": {
+        "dateTime": "2026-11-26T10:30:00+04:00",
+        "timeZone": "Asia/Dubai"
+      },
+      "status": "confirmed",
+      "summary": "Weekly Sync: Atiqa + Muskaan",
+      "updated": "2026-11-18T20:57:06.522Z"
+    }
+  ],
+  "nextPageToken": ""
+}
